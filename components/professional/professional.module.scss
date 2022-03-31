@@ -1,0 +1,56 @@
+.wrapperView {
+    width: calc(100vw - 200px);
+    margin: 0px 100px;
+    margin-top: 200px;
+    .contentView {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .title {
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 175%;
+            color: #254261;
+        }
+        .groupView {
+            margin-top: 64px;
+            display: flex;
+            .wrapperCard {
+                flex: 1;
+                display: flex;
+                .avatar {
+                    background: linear-gradient(196.42deg, rgba(255, 255, 255, 0.092) 4.76%, rgba(70, 191, 199, 0.156) 60.69%, rgba(37, 128, 153, 0.2) 93.1%);
+                    border-radius: 16px;
+                    height: 300px;
+                    width: 292px;
+                }
+                .information {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 40px 32px 44px 32px;
+                    .company {
+                    }
+                    .name {
+                        margin-top: 32px;
+                        font-weight: bold;
+                        font-size: 24px;
+                        line-height: 46px;
+                        color: #254261;
+                    }
+                    .info {
+                        margin-top: 4px;
+                        font-weight: normal;
+                        font-size: 18px;
+                        line-height: 194%;
+                        letter-spacing: 0.005em;
+                        color: #254261;
+
+                    }
+                }
+            }
+        }
+    }
+}
+

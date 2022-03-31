@@ -1,0 +1,11 @@
+.wrapperView {
+    width: 100%vw;
+    margin-top: 64px;
+    .contentView {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

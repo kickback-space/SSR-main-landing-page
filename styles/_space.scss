@@ -1,0 +1,12 @@
+@mixin space($class, $property) {
+    @for $i from 1 to 200 {
+      #{$class}-#{$i} {
+        #{$property}: #{$i}px !important;
+      }
+    }
+}
+
+@include space('.v-mt','margin-top');
+@include space('.v-mb','margin-bottom');
+@include space('.v-ml','margin-left');
+@include space('.v-mr','margin-right');

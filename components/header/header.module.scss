@@ -1,0 +1,74 @@
+@import "responsive";
+
+.headerWrapperView {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: 2;
+    @include mobile {
+        height: 56px;
+        padding: 0px 16px;
+    }
+    @include tablet {
+        height: 56px;
+        padding: 0px 16px;
+    }
+    @include desktop {
+        height: 72px;
+        padding: 0px 50px 0px 100px;
+        justify-content: space-between;
+    }
+
+    .headerLogo {
+        @include mobile {
+            width: 126px;
+            height: 32px;
+        }
+        @include tablet {
+            width: 126px;
+            height: 32px;
+        }
+        @include desktop {
+            width: 189px;
+            height: 48px
+        }
+    }
+    .headerGroupView {
+        @include mobile {
+            display: none;
+        }
+        @include tablet {
+            display: none;
+        }
+        @include desktop {
+            display: flex;
+            align-items: center;
+            .titleItem {
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 190%;
+                color: #258099;
+            }
+            .actionButton {
+                width: 182px;
+                height: 58px;
+                border-radius: 12px;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 190%;
+                color: #FFFFFF;
+            }
+        }
+    }
+    .menuGroupView {
+        @include mobile {
+            display: flex;
+        }
+        @include tablet {
+            display: flex;
+        }
+        @include desktop {
+            display: none;
+        }
+    }
+}

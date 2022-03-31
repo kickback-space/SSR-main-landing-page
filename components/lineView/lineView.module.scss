@@ -1,0 +1,17 @@
+.wrapperView {
+    width: calc(100vw - 200px);
+    margin: 0px 100px;
+    margin-top: 112px;
+    .contentView {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        .groupView {
+            flex: 1;
+            border-top: 2px dashed #46BFC7;
+        }
+        .lineIcon {
+            margin: 0px 30px;
+        }
+    }
+}
