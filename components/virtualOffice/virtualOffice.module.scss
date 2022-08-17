@@ -1,59 +1,61 @@
 .wrapperView {
-    width: calc(100vw - 200px);
-    margin: 0px 100px;
-    margin-top: 200px;
-    .contentView {
-        width: 100%;
+  padding: 16px;
+  .contentView {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 24px;
+    .wrapperLeftView {
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(180.05deg, #e0fcff 0.04%, #f3feff 99.96%);
+      box-shadow: 10px 20px 20px rgb(236 236 236 / 29%);
+      border-radius: 24px;
+      padding: 32px 40px;
+      .leftViewTitle {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 184%;
+        color: #254261;
+        text-align: center;
+      }
+      .leftViewGroup {
         display: flex;
-        align-items: center;
-        .wrapperLeftView {
-            z-index: 2;
-            width: calc(504px - 80px - 1px);
-            height: calc(544px - 242px - 1px);
-            display: flex;
-            flex-direction: column;
-            background: linear-gradient(180.05deg, #E0FCFF 0.04%, #F3FEFF 99.96%);
-            box-shadow: 10px 20px 20px rgb(236 236 236 / 29%);
-            border-radius: 24px;
-            padding: 121px 40px;
-            .leftViewTitle {
-                font-weight: bold;
-                font-size: 24px;
-                line-height: 184%;
-                color: #254261;
-            }
-            .leftViewGroup {
-                display: flex;
-                flex-direction: row;
-                .leftViewGroupInfo {
-                    margin-left: 16px;
-                    font-weight: 600;
-                    font-size: 20px;
-                    line-height: 40px;
-                    color: #254261;
-                }
-                .leftViewGroupHighlight {
-                    color: #F0A03F;
-                }
-            }
-            .leftViewButton {
-                width: 182px;
-                height: 58px;
-                border-radius: 12px;
-                font-weight: 600;
-                font-size: 18px;
-                line-height: 190%;
-                color: #FFFFFF;
-            }
+        flex-direction: row;
+        .leftViewGroupInfo {
+          margin-left: 16px;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 40px;
+          color: #254261;
         }
-        .WrapperRightView {
-            background-color: #FFFFFF;
-            width: calc(891x - 48px - 1px);
-            height: calc(688px - 48px - 1px);
-            box-shadow: -20px 20px 50px 20px rgba(203, 203, 203, 0.25);
-            border-radius: 24px;
-            padding: 24px;
-            margin-left: -155px;
+        .leftViewGroupHighlight {
+          color: #f0a03f;
         }
+      }
+      .leftViewButton {
+        width: 182px;
+        height: 58px;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 190%;
+        color: #ffffff;
+      }
     }
+    .WrapperRightView {
+      background-color: #ffffff;
+      box-shadow: -20px 20px 50px 20px rgba(203, 203, 203, 0.25);
+      border-radius: 24px;
+      padding: 24px;
+      span {
+        font-size: 16px;
+        line-height: 200%;
+        font-weight: bold;
+        color: #254261;
+      }
+    }
+  }
 }

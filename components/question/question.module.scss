@@ -1,0 +1,15 @@
+@import 'responsive';
+
+.wrapperView {
+  position: relative;
+  margin-top: -76px;
+  .contentView {
+    padding: 24px 16px 24px 16px;
+    .titleGroup {
+      display: flex;
+      flex-direction: column;
+      margin-top: calc(241px - 128px);
+      align-items: center;
+    }
+  }
+}

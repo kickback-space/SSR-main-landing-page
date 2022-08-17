@@ -5,6 +5,7 @@ import FirstInformation from '../components/firstInformation';
 import Value from '../components/value';
 import Easy from '../components/easy';
 import VirtualOffice from '../components/virtualOffice';
+import Question from '../components/question';
 import LineView from '../components/lineView';
 import VirtualEvent from '../components/virtualEvent';
 import Professional from '../components/professional';
@@ -15,22 +16,25 @@ export default function Home() {
     <div>
       <Head>
         <title>Kickback space Inc</title>
-        <meta name="description" content="Introducing the best way to be present online: photo-realistic virtual environments, video & audio enhancement, and bleeding-edge communication features"/>
-        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name='description'
+          content='Introducing the best ways to be present online: photo-realistic virtual environments, video & audio enhancement, and bleeding-edge communication features'
+        />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
-
       <main>
-        <Header/>
-        <Panel/>
-        <FirstInformation/>
-        <Value/>
-        <Easy/>
-        <VirtualOffice/>
-        <LineView/>
-        <VirtualEvent/>
-        <Professional/>
-        <Footer/>
+        <Header />
+        <Panel />
+        <FirstInformation />
+        <VirtualOffice />
+        <Easy />
+        <Value />
+        <Question />
+        {/* <Professional />
+        <LineView />
+        <VirtualEvent />
+        <Footer /> */}
       </main>
     </div>
-  )
+  );
 }
