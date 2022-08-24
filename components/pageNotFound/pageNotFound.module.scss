@@ -1,0 +1,37 @@
+.wrapperContainer {
+  padding: 44px 38px 64px 38px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  .numberNotFound {
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 120px;
+    color: #254261;
+  }
+  .textNotFound {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 212%;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #254261;
+  }
+  .buttonStyled {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    button {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      width: 182px;
+      height: 58px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 190%;
+      color: #fff1df;
+    }
+  }
+}

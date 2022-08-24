@@ -2,25 +2,36 @@ import { useState } from 'react';
 import Image from 'next/image';
 import styles from './header.module.scss';
 import headerIcon from '../../public/icon/headerIcon.svg';
+import headerIconBrowser from '../../public/icon/headerIconBrowser.svg';
 import menuIcon from '../../public/icon/menuIcon.svg';
+import Sidebar from '../sidebar';
 
-function Header() {
-  const [isOpenMenu, setIsOpenMenu] = useState(false);
+function Header(props) {
+  const [sidebarOpen, setSideBarOpen] = useState(false);
   function getStart() {}
 
   function FAQ() {}
 
   function action() {}
 
-  function handleChangeStateMenu(value) {
-    setIsOpenMenu(value);
+  function handleViewSidebar() {
+    setSideBarOpen(!sidebarOpen);
   }
   return (
     <div className={styles.headerWrapperView}>
       <div className={styles.headerLogo}>
         <Image src={headerIcon} alt='iconHeader' />
       </div>
-      {/* <div className={styles.headerGroupView}>
+      <div className={styles.headerLogoBrowser}>
+        <Image src={headerIconBrowser} alt='iconHeader' />
+      </div>
+      <div
+        onClick={handleViewSidebar}
+        className={`cursor ${styles.headerMenuIcon}`}
+      >
+        <Image src={menuIcon} alt='menuIcon' />
+      </div>
+      <div className={styles.headerGroupView}>
         <span
           className={`cursor ${styles.titleItem}`}
           onClick={getStart}
@@ -33,10 +44,8 @@ function Header() {
           className={`v-ml-83 ${styles.actionButton}`}
           onClick={action}
         >{`See it in action`}</button>
-      </div> */}
-      <div className={styles.headerLogo}>
-        <Image src={menuIcon} aclt='menuIcon' />
       </div>
+      <Sidebar isOpen={sidebarOpen} toggleSidebar={handleViewSidebar} />
     </div>
   );
 }

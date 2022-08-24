@@ -1,3 +1,5 @@
+@import 'responsive';
+
 .wrapperView {
   margin-top: 36px;
   text-align: center;
@@ -6,7 +8,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: linear-gradient(
+      269.05deg,
+      #e3fdff -29.37%,
+      rgba(236, 254, 255, 0) 64.62%
+    );
     .firstContentWrapper {
+      @include desktop {
+        width: 100%;
+      }
       display: flex;
       flex-direction: column;
       background: linear-gradient(
@@ -25,8 +35,11 @@
     .videoBanner {
       margin-top: 48px;
       button {
+        @include desktop {
+          display: none;
+        }
         position: absolute;
-        top: 97%;
+        top: 120%;
         left: 57%;
         width: 166px;
         height: 64px;
@@ -39,6 +52,9 @@
       }
     }
     .groupView {
+      @include desktop {
+        width: 90%;
+      }
       margin: 48px 16px 48px 16px;
       background: linear-gradient(180deg, #dbfcff 0%, #f3feff 100%);
       box-shadow: 10px 20px 20px rgba(236, 236, 236, 0.29);

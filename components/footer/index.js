@@ -1,49 +1,58 @@
 import Image from 'next/image';
-import styles from './footer.module.scss'
+import styles from './footer.module.scss';
+import Insta from '../../public/icon/insta.svg';
+import Email from '../../public/icon/email.svg';
+import LogoNoColor from '../../public/icon/logoNoColor.svg';
 
 const contactData = [
-    {
-        info: 'kickback.space',
-        icon: 'kickback.space'
-    },
-    {
-        info: 'support@kickback.space',
-        icon: 'support@kickback.space'
-    }
-]
+  {
+    info: 'kickback.space',
+    icon: 'kickback.space',
+  },
+  {
+    info: 'support@kickback.space',
+    icon: 'support@kickback.space',
+  },
+];
 
 function ContactItem(props) {
-    return (
-        <div>
-
-        </div>
-    )
+  return <div></div>;
 }
 
 function Footer() {
-    return(
-        <div className={styles.wrapperView}>
-            <div className={styles.contentView}>
-                <div className={styles.line}></div>
-                <div className={styles.contactGroup}>
-                    <div>
-                        <span>{`How to get started`}</span>
-                        <span>{`FAQ`}</span>
-                    </div>
-                    <div>
-                        {
-                            contactData.map((item, index) => <ContactItem key={index} data={item}/>)
-                        }
-                    </div>
-                </div>
-                <div className={styles.logoGroup}>
-                    <div>
-                    </div>
-                    <span>{`Copyright reserved by Kickback Space Inc, 2021`}</span>
-                </div>
+  return (
+    <div>
+      <div className={styles.divine} />
+      <div className={styles.wrapperView}>
+        <div className={styles.contentView}>
+          <div className={styles.contactGroup}>
+            <div className={styles.firstContact}>
+              <span>{`How to get started`}</span>
+              <span>{`FAQ`}</span>
+              <div className={styles.kickBackSpace}>
+                <Image src={Insta} alt='instaIcon' />
+                <p>{`kickback.space`}</p>
+              </div>
+              <div className={styles.kickBackSupport}>
+                <Image src={Email} alt='emailIcon' />
+                <p>{`support@kickback.space`}</p>
+              </div>
             </div>
+
+            <div>
+              {contactData.map((item, index) => (
+                <ContactItem key={index} data={item} />
+              ))}
+            </div>
+          </div>
+          <div className={styles.logoGroup}>
+            <Image src={LogoNoColor} alt='logo' />
+            <span>{`Copyright reserved by Kickback Space Inc, 2021`}</span>
+          </div>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
 
 export default Footer;

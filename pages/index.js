@@ -10,6 +10,7 @@ import LineView from '../components/lineView';
 import VirtualEvent from '../components/virtualEvent';
 import Professional from '../components/professional';
 import Footer from '../components/footer';
+import Meet from '../components/meet';
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
         <title>Kickback space Inc</title>
         <meta
           name='description'
-          content='Introducing the best ways to be present online: photo-realistic virtual environments, video & audio enhancement, and bleeding-edge communication features'
+          content='Introducing the best way to be present online: photo-realistic virtual environments, video & audio enhancement, and bleeding-edge communication features'
         />
         <link rel='icon' href='/favicon.ico' />
       </Head>
@@ -26,14 +27,18 @@ export default function Home() {
         <Header />
         <Panel />
         <FirstInformation />
-        <VirtualOffice />
+        {/* <VirtualOffice /> */}
         <Easy />
         <Value />
         <Question />
+        <Meet />
+        {/* 
+        <Meet />
+        <Footer /> */}
         {/* <Professional />
         <LineView />
         <VirtualEvent />
-        <Footer /> */}
+         */}
       </main>
     </div>
   );

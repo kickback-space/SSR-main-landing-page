@@ -9,7 +9,7 @@ function Value() {
       <div className={styles.contentView}>
         <span
           className={styles.title}
-        >{`kick back brings back non-verbal cues in 3D spaces; all with just your laptop`}</span>
+        >{`Looking at the camera is now a thing of the past with our automatic eye gaze adjustment*`}</span>
         <div className={styles.groupEyeView}>
           <div className={styles.noEyeContact}>
             <span
@@ -23,6 +23,10 @@ function Value() {
             >{`Eye contact enabled`}</span>
             <Image src={eyeContact} alt='eyeContactBanner' />
           </div>
+        </div>
+        <div className={`${styles.bottomContent} 'v-mt-17'`}>
+          <span>{`As we approach Angela & Chris we are able to recognize they are actively engaged  in conversation`}</span>
+          <span>{`* Coming Soon`}</span>
         </div>
       </div>
     </div>

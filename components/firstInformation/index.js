@@ -12,7 +12,11 @@ function FirstInformation() {
             className={styles.title}
           >{`2D video limits our ability to communicate naturally online`}</span>
           <div className={styles.videoBanner}>
-            <Image src={videoBanner} alt={`videoBannerFirstInformation`} />
+            <Image
+              layout='responsive'
+              src={videoBanner}
+              alt={`videoBannerFirstInformation`}
+            />
             <button>{`Get early access`}</button>
           </div>
         </div>
@@ -22,7 +26,11 @@ function FirstInformation() {
               className={styles.title}
             >{`What we need is a better, more organic communication medium`}</span>
             <div className={styles.groupViewBanner}>
-              <Image src={groupBanner} alt={`groupBannerFirstInformation`} />
+              <Image
+                layout='responsive'
+                src={groupBanner}
+                alt={`groupBannerFirstInformation`}
+              />
             </div>
             <span
               className={styles.info}

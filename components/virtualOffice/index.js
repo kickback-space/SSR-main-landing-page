@@ -8,43 +8,57 @@ function VirtualOffice() {
     <div className={styles.wrapperView}>
       <div className={styles.contentView}>
         <div className={styles.WrapperRightView}>
-          <Image src={virtualOfficeBanner} alt='virtualOfficeBanner' />
+          <Image
+            priority={true}
+            layout='intrinsic'
+            src={virtualOfficeBanner}
+            alt='virtualOfficeBanner'
+          />
           <span>{`*Background removal coming soon`}</span>
         </div>
         <div className={styles.wrapperLeftView}>
           <span
             className={styles.leftViewTitle}
-          >{`Spin up your Virtual Office`}</span>
+          >{`Run an immersive event `}</span>
           <div className={`v-mt-16 ${styles.leftViewGroup}`}>
-            <Image src={checkedGreenIcon} alt='checkedGreenIcon1' />
+            <Image
+              priority={true}
+              src={checkedGreenIcon}
+              alt='checkedGreenIcon1'
+            />
             <span className={styles.leftViewGroupInfo}>
-              <span className={styles.leftViewGroupHighlight}>{`solve`}</span>
-              {` workforce `}
+              {` Become an `}
               <span
                 className={styles.leftViewGroupHighlight}
-              >{`isolation`}</span>
+              >{`inclusive host `}</span>
             </span>
           </div>
           <div className={`v-mt-16 ${styles.leftViewGroup}`}>
-            <Image src={checkedGreenIcon} alt='checkedGreenIcon2' />
+            <Image
+              priority={true}
+              src={checkedGreenIcon}
+              alt='checkedGreenIcon2'
+            />
             <span className={styles.leftViewGroupInfo}>
-              {`foster `}
+              {`Increase `}
               <span
                 className={styles.leftViewGroupHighlight}
-              >{`collaboration`}</span>
+              >{`engagement`}</span>
               {` & `}
-              <span
-                className={styles.leftViewGroupHighlight}
-              >{`innovation`}</span>
+              <span className={styles.leftViewGroupHighlight}>{`ROI`}</span>
             </span>
           </div>
           <div className={`v-mt-16 ${styles.leftViewGroup}`}>
-            <Image src={checkedGreenIcon} alt='checkedGreenIcon3' />
+            <Image
+              priority={true}
+              src={checkedGreenIcon}
+              alt='checkedGreenIcon3'
+            />
             <span className={styles.leftViewGroupInfo}>
-              {`activate `}
+              {`Spark `}
               <span
                 className={styles.leftViewGroupHighlight}
-              >{`serendipitous  conversations`}</span>
+              >{`geniune  connections`}</span>
             </span>
           </div>
           <button
