@@ -21,21 +21,25 @@ function ContactItem(props) {
 
 function Footer() {
   return (
-    <div>
+    <div id='footerView'>
       <div className={styles.divine} />
       <div className={styles.wrapperView}>
         <div className={styles.contentView}>
           <div className={styles.contactGroup}>
             <div className={styles.firstContact}>
-              <span>{`How to get started`}</span>
-              <span>{`FAQ`}</span>
-              <div className={styles.kickBackSpace}>
-                <Image src={Insta} alt='instaIcon' />
-                <p>{`kickback.space`}</p>
+              <div className={styles.leftFooter}>
+                <span>{`How to get started`}</span>
+                <span>{`FAQ`}</span>
               </div>
-              <div className={styles.kickBackSupport}>
-                <Image src={Email} alt='emailIcon' />
-                <p>{`support@kickback.space`}</p>
+              <div className={styles.rightFooter}>
+                <div className={styles.kickBackSpace}>
+                  <Image src={Insta} alt='instaIcon' />
+                  <p>{`kickback.space`}</p>
+                </div>
+                <div className={styles.kickBackSupport}>
+                  <Image src={Email} alt='emailIcon' />
+                  <p>{`support@kickback.space`}</p>
+                </div>
               </div>
             </div>
 
@@ -45,10 +49,10 @@ function Footer() {
               ))}
             </div>
           </div>
-          <div className={styles.logoGroup}>
-            <Image src={LogoNoColor} alt='logo' />
-            <span>{`Copyright reserved by Kickback Space Inc, 2021`}</span>
-          </div>
+        </div>
+        <div className={styles.logoGroup}>
+          <Image src={LogoNoColor} alt='logo' />
+          <span>{`Copyright reserved by Kickback Space Inc, 2021`}</span>
         </div>
       </div>
     </div>

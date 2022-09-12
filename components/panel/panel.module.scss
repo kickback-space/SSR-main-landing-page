@@ -2,13 +2,14 @@
 
 .wrapperView {
   margin-top: -100px;
+  position: relative;
   .contentView {
-    padding: 24px 16px 24px 16px;
     .titleGroup {
       display: flex;
       flex-direction: column;
       margin-top: calc(241px - 128px);
       align-items: center;
+      padding: 0px 16px;
       @include desktop {
         flex-direction: row-reverse;
         justify-content: space-between;
@@ -24,7 +25,6 @@
         @include desktop {
           margin-top: unset;
           font-size: 32px;
-          font-weight: 700;
           text-align: left;
         }
       }
@@ -41,20 +41,23 @@
       }
     }
     .videoGroup {
-      max-height: calc(429px - 2px - 49px);
-      padding: 15px;
+      padding: 24px;
       background: #ffffff;
       box-shadow: 10px 10px 50px #ececec;
       border-radius: 16px;
-      img {
-        border-radius: 16px;
-        width: 584px;
-        height: 381px;
+      video {
+        border-radius: 8px;
+        width: 100%;
+        @include desktop {
+          width: 584px;
+        }
       }
     }
     .infoGroup {
       display: flex;
       flex-direction: column;
+      flex: 1;
+      margin-right: 25px;
       .buttonContainer {
         display: flex;
         align-items: center;
@@ -92,5 +95,11 @@
     left: 0;
     position: absolute;
     z-index: -1;
+    height: 100%;
+    div {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
   }
 }

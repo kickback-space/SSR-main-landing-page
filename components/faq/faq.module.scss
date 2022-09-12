@@ -1,0 +1,56 @@
+@import 'responsive';
+
+.wrapperView {
+  margin-top: -76px;
+  .contentView {
+    padding: 24px 5vw 24px 5vw;
+    background: linear-gradient(
+      65deg,
+      #cdfcff -0.94%,
+      rgba(236, 254, 255, 0) 55.43%
+    );
+    .titleGroup {
+      display: flex;
+      flex-direction: column;
+      margin-top: calc(241px - 128px);
+      .title {
+        margin-bottom: 32px;
+      }
+      .questionItem {
+        margin-bottom: 32px;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none;
+      }
+
+      .content {
+        transition: max-height 0.2s ease-out;
+        background-color: white;
+        .divine {
+          margin: 16px 0 24px 0;
+          border: 1px solid #b8b8b8;
+        }
+        span {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 212%;
+          color: #585858;
+          letter-spacing: 0.005em;
+        }
+      }
+      span {
+        @include desktop {
+          font-size: 32px;
+        }
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 175%;
+        color: #254261;
+      }
+    }
+  }
+}

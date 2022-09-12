@@ -37,10 +37,12 @@ function GroupItemView(props) {
 
 function Easy() {
   return (
-    <div className={styles.wrapperView}>
+    <div id='easyView' className={styles.wrapperView}>
       <div className={styles.contentView}>
         <div className={styles.easyBanner}>
-          <Image src={easyBanner} alt='easyBanner' />
+          <video autoPlay muted loop>
+            <source src='/video/mainVideo.mp4' type='video/mp4' />
+          </video>
         </div>
         <div className={styles.groupView}>
           <span

@@ -12,8 +12,10 @@ function PageNotFound() {
   };
   return (
     <div className={styles.wrapperContainer}>
-      <div>
-        <Image layout='responsive' src={notFoundImage} alt='not found image' />
+      <div className={styles.imageView}>
+        <Image src={notFoundImage} alt='not found image' />
+      </div>
+      <div className={styles.contentView}>
         <div className={styles.numberNotFound}> 404</div>
         <div className={styles.textNotFound}>
           {'Oops! The page you are looking for doesn’t exist'}

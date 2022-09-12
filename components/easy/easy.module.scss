@@ -8,7 +8,7 @@
     rgba(255, 249, 241, 0) 72.61%
   );
   @include desktop {
-    padding: 7vw;
+    padding: 64px;
   }
   .contentView {
     width: 100%;
@@ -26,6 +26,13 @@
       padding: 24px;
       @include desktop {
         height: fit-content;
+      }
+      video {
+        border-radius: 8px;
+        width: 100%;
+        @include desktop {
+          width: 584px;
+        }
       }
     }
     .groupView {

@@ -1,17 +1,21 @@
 import Image from 'next/image';
 import styles from './panel.module.scss';
-import videoBanner from '../../public/banner/videoBanner.svg';
-import arrowBannerIcon from '../../public/icon/arrowBannerIcon.svg';
-import backgroundImageBanner from '../../public/banner/backgroundImageBanner.png';
-import earlyButton from '../../public/button/get-early-access/Get_Early_Access_Default.svg';
+import * as React from 'react';
 
 function Panel() {
+  function handleTransitionNextView() {
+    let nextViw = document.getElementById('informationView');
+    nextViw.scrollIntoView({ behavior: 'smooth' }, true);
+  }
+
   return (
-    <div className={styles.wrapperView}>
+    <div id='panelView' className={styles.wrapperView}>
       <div className={styles.contentView}>
         <div className={styles.titleGroup}>
           <div className={styles.videoGroup}>
-            <Image src={videoBanner} alt='videoBanner' />
+            <video autoPlay muted loop>
+              <source src='/video/mainVideo.mp4' type='video/mp4' />
+            </video>
           </div>
           <div className={styles.infoGroup}>
             <span>{`kick back and foster conversations as if you’re actually together`}</span>
@@ -21,20 +25,33 @@ function Panel() {
           </div>
         </div>
         <div className={`${styles.bottomPanel} v-mt-27 cursor`}>
-          <Image src={arrowBannerIcon} alt='arrowBannerIcon' />
-          <Image src={earlyButton} alt='get early access button default' />
+          <Image
+            onClick={handleTransitionNextView}
+            width={64}
+            height={64}
+            src={'/icon/arrowBannerIcon.svg'}
+            alt='arrowBannerIcon'
+          />
+          <Image
+            width={166}
+            height={46}
+            src='/button/get-early-access/Get_Early_Access_Default.svg'
+            alt='get early access button default'
+          />
         </div>
       </div>
-
       <div className={styles.layoutImage}>
-        <Image
-          layout='responsive'
-          src={backgroundImageBanner}
-          alt='backgroundImageBanner'
-        />
+        <div>
+          <Image
+            layout='fill'
+            src={'/banner/backgroundImageBanner.png'}
+            alt='backgroundImageBanner'
+            priority
+          />
+        </div>
       </div>
     </div>
   );
 }
 
-export default Panel;
+export default React.memo(Panel);

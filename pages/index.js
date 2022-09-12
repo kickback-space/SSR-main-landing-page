@@ -1,16 +1,13 @@
 import Head from 'next/head';
 import Header from '../components/header';
 import Panel from '../components/panel';
-import FirstInformation from '../components/firstInformation';
+import Information from '../components/information';
 import Value from '../components/value';
 import Easy from '../components/easy';
 import VirtualOffice from '../components/virtualOffice';
-import Question from '../components/question';
-import LineView from '../components/lineView';
-import VirtualEvent from '../components/virtualEvent';
-import Professional from '../components/professional';
+import FAQ from '../components/faq';
 import Footer from '../components/footer';
-import Meet from '../components/meet';
+import Team from '../components/team';
 
 export default function Home() {
   return (
@@ -26,19 +23,13 @@ export default function Home() {
       <main>
         <Header />
         <Panel />
-        <FirstInformation />
-        {/* <VirtualOffice /> */}
+        <Information />
+        <VirtualOffice />
         <Easy />
         <Value />
-        <Question />
-        <Meet />
-        {/* 
-        <Meet />
-        <Footer /> */}
-        {/* <Professional />
-        <LineView />
-        <VirtualEvent />
-         */}
+        <Team />
+        <FAQ />
+        <Footer />
       </main>
     </div>
   );

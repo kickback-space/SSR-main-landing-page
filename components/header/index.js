@@ -1,12 +1,9 @@
-import { useState } from 'react';
+import { useState, memo, useEffect } from 'react';
 import Image from 'next/image';
 import styles from './header.module.scss';
-import headerIcon from '../../public/icon/headerIcon.svg';
-import headerIconBrowser from '../../public/icon/headerIconBrowser.svg';
-import menuIcon from '../../public/icon/menuIcon.svg';
 import Sidebar from '../sidebar';
 
-function Header(props) {
+function Header() {
   const [sidebarOpen, setSideBarOpen] = useState(false);
   function getStart() {}
 
@@ -17,19 +14,61 @@ function Header(props) {
   function handleViewSidebar() {
     setSideBarOpen(!sidebarOpen);
   }
+
+  function handleResizeScreen() {
+    if (window.innerWidth >= 1024 && sidebarOpen) {
+      setSideBarOpen(false);
+    }
+  }
+  function handleBlockScroll() {
+    if (sidebarOpen) {
+      if (!document.body.classList.contains('blockScroll'))
+        document.body.classList.add('blockScroll');
+    } else {
+      if (document.body.classList.contains('blockScroll'))
+        document.body.classList.remove('blockScroll');
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResizeScreen);
+    return () => {
+      window.removeEventListener('resize', handleResizeScreen);
+    };
+  }, [sidebarOpen]);
+
+  useEffect(() => {
+    handleBlockScroll();
+  });
+
   return (
-    <div className={styles.headerWrapperView}>
+    <div id='headerView' className={styles.headerWrapperView}>
       <div className={styles.headerLogo}>
-        <Image src={headerIcon} alt='iconHeader' />
+        <Image
+          width={127}
+          height={32}
+          src={'/icon/headerIcon.svg'}
+          alt='iconHeader'
+        />
       </div>
       <div className={styles.headerLogoBrowser}>
-        <Image src={headerIconBrowser} alt='iconHeader' />
+        <Image
+          width={200}
+          height={48}
+          src={'/icon/headerIconBrowser.svg'}
+          alt='iconHeader'
+        />
       </div>
       <div
         onClick={handleViewSidebar}
         className={`cursor ${styles.headerMenuIcon}`}
       >
-        <Image src={menuIcon} alt='menuIcon' />
+        <Image
+          width={32}
+          height={32}
+          src={'/icon/menuIcon.svg'}
+          alt='menuIcon'
+        />
       </div>
       <div className={styles.headerGroupView}>
         <span
@@ -41,7 +80,7 @@ function Header(props) {
           onClick={FAQ}
         >{`FAQ`}</span>
         <button
-          className={`v-ml-83 ${styles.actionButton}`}
+          className={`cursor v-ml-83 ${styles.actionButton}`}
           onClick={action}
         >{`See it in action`}</button>
       </div>
@@ -50,4 +89,4 @@ function Header(props) {
   );
 }
 
-export default Header;
+export default memo(Header);

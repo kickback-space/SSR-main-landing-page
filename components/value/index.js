@@ -5,7 +5,7 @@ import eyeContact from '../../public/banner/eyeContactBanner.svg';
 
 function Value() {
   return (
-    <div className={styles.wrapperView}>
+    <div id='valueView' className={styles.wrapperView}>
       <div className={styles.contentView}>
         <span
           className={styles.title}

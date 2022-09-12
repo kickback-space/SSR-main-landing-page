@@ -12,6 +12,7 @@ main {
 .cursor {
   cursor: pointer;
 }
+
 button {
   cursor: pointer;
   display: flex;
@@ -25,4 +26,7 @@ button {
   &:active {
     background-color: $v-bg-46BFC7;
   }
+}
+.blockScroll {
+  overflow: hidden;
 }

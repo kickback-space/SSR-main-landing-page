@@ -5,12 +5,13 @@ import checkedGreenIcon from '../../public/icon/checkedGreenIcon.svg';
 
 function VirtualOffice() {
   return (
-    <div className={styles.wrapperView}>
+    <div id='virtualView' className={styles.wrapperView}>
       <div className={styles.contentView}>
         <div className={styles.WrapperRightView}>
           <Image
             priority={true}
-            layout='intrinsic'
+            width={785}
+            height={558}
             src={virtualOfficeBanner}
             alt='virtualOfficeBanner'
           />
