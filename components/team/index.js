@@ -7,8 +7,6 @@ import Kevin from '../../public/avatar/engineer/Kevin.svg';
 import Owais from '../../public/avatar/engineer/Owais.svg';
 import Trinh from '../../public/avatar/engineer/Trinh.svg';
 import Yannis from '../../public/avatar/engineer/Yannis.svg';
-import Sgadou from '../../public/avatar/machine-learning/Sgadou.svg';
-import Ramalingam from '../../public/avatar/machine-learning/Ramalingam.svg';
 import Erfan from '../../public/avatar/machine-learning/Erfan.svg';
 import Pankhuri from '../../public/avatar/design/Pankhuri.svg';
 import Erik from '../../public/avatar/design/Erik.svg';
@@ -19,13 +17,14 @@ import Dan from '../../public/avatar/advisor/Dan.svg';
 import Yossi from '../../public/avatar/advisor/Yossi.svg';
 import Todd from '../../public/avatar/advisor/Todd.svg';
 import Rocco from '../../public/avatar/founder/rocco.svg';
+import Muthu from '../../public/avatar/engineer/Muthu.svg';
 import Accordion from '../according';
 
 const engineerPeopleData = [
   {
     avatar: Phat,
     name: 'Phat Trinh Chan',
-    position: 'Frontend Engineer',
+    position: 'Software Engineer',
     published: false,
   },
   {
@@ -41,6 +40,24 @@ const engineerPeopleData = [
     published: false,
   },
   {
+    avatar: Owais,
+    name: 'Owais Nasir',
+    position: 'Software Engineer',
+    published: false,
+  },
+  {
+    avatar: Muthu,
+    name: 'Dr.Muthu Ramalingam',
+    position: 'Applied Machine Learning Engineer',
+    published: true,
+  },
+  {
+    avatar: Trinh,
+    name: 'Trinh Dong',
+    position: 'Frontend Engineer',
+    published: false,
+  },
+  {
     avatar: Kevin,
     name: 'Kelvin Yankey',
     position: 'Software Engineer',
@@ -52,58 +69,24 @@ const engineerPeopleData = [
     position: 'Infrastructure Engineer',
     published: false,
   },
-  {
-    avatar: Trinh,
-    name: 'Trinh Dong',
-    position: 'Frontend Engineer',
-    published: false,
-  },
-  {
-    avatar: Owais,
-    name: 'Owais Nasir',
-    position: 'Game Developer',
-    published: false,
-  },
 ];
-const machineLearningPeopleData = [
-  {
-    avatar: Sgadou,
-    name: 'Sgadou Tienn',
-    position: 'Applied Machine Learning Engineer',
-    published: false,
-  },
-  {
-    avatar: Ramalingam,
-    name: 'Dr. Muthu Ramalingam',
-    position: 'Applied Machine Learning Engineer',
-    published: true,
-  },
-  {
-    avatar: Erfan,
-    name: 'Erfan Eshratifar',
-    position: 'Applied Machine Learning Engineer',
-    published: false,
-  },
-];
-const designPeopleData = [
-  {
-    avatar: Pankhuri,
-    name: 'Pankhuri Badal',
-    position: 'Designer',
-    published: false,
-  },
+const userExperienceAndDesignPeopleData = [
   {
     avatar: Erik,
     name: 'Erik Nanda',
     position: 'Lead Designer',
     published: false,
   },
-];
-const userExperiencePeopleData = [
   {
     avatar: Winson,
     name: 'Winson Teo',
     position: 'Architect & CGI Artist',
+    published: false,
+  },
+  {
+    avatar: Pankhuri,
+    name: 'Pankhuri Badal',
+    position: 'Designer',
     published: false,
   },
 ];
@@ -146,6 +129,12 @@ const founder = [
     name: 'Rocco Haro',
     position: 'Principal',
     published: true,
+  },
+  {
+    avatar: Erfan,
+    name: 'Erfan Eshratifar',
+    position: 'Chief ML Scientists',
+    published: false,
   },
 ];
 
@@ -191,31 +180,11 @@ function Team() {
           </div>
           <div className={styles.questionItem}>
             <Accordion
-              title={`Machine learning (${machineLearningPeopleData.length})`}
+              title={`User Experience & Designers (${userExperienceAndDesignPeopleData.length})`}
             >
               <div className={styles.content}>
-                {machineLearningPeopleData.map((item, index) => (
+                {userExperienceAndDesignPeopleData.map((item, index) => (
                   <PeopleInformation key={index} data={item} position='right' />
-                ))}
-              </div>
-            </Accordion>
-          </div>
-          <div className={styles.questionItem}>
-            <Accordion title={`Design (${designPeopleData.length})`}>
-              <div className={styles.content}>
-                {designPeopleData.map((item, index) => (
-                  <PeopleInformation key={index} data={item} />
-                ))}
-              </div>
-            </Accordion>
-          </div>
-          <div className={styles.questionItem}>
-            <Accordion
-              title={`User Experience (${userExperiencePeopleData.length})`}
-            >
-              <div className={styles.content}>
-                {userExperiencePeopleData.map((item, index) => (
-                  <PeopleInformation key={index} data={item} />
                 ))}
               </div>
             </Accordion>
@@ -230,7 +199,7 @@ function Team() {
             </Accordion>
           </div>
           <div className={styles.questionItem}>
-            <Accordion title={`Founder`}>
+            <Accordion title={`Founder (${founder.length})`}>
               <div className={styles.content}>
                 {founder.map((item, index) => (
                   <PeopleInformation key={index} data={item} />

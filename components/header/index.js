@@ -5,11 +5,19 @@ import Sidebar from '../sidebar';
 
 function Header() {
   const [sidebarOpen, setSideBarOpen] = useState(false);
-  function getStart() {}
+  function getStart() {
+    let easyView = document.getElementById('easyView');
+    easyView.scrollIntoView({ behavior: 'smooth' }, true);
+  }
 
-  function FAQ() {}
+  function FAQ() {
+    let faqView = document.getElementById('questionView');
+    faqView.scrollIntoView({ behavior: 'smooth' }, true);
+  }
 
-  function action() {}
+  function action() {
+    window.open('https://calendly.com/rocco-haro/15min', '_blank');
+  }
 
   function handleViewSidebar() {
     setSideBarOpen(!sidebarOpen);

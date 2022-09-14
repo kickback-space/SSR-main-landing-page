@@ -4,10 +4,12 @@ import * as React from 'react';
 
 function Panel() {
   function handleTransitionNextView() {
-    let nextViw = document.getElementById('informationView');
-    nextViw.scrollIntoView({ behavior: 'smooth' }, true);
+    let nextView = document.getElementById('informationView');
+    nextView.scrollIntoView({ behavior: 'smooth' }, true);
   }
-
+  function actionClick() {
+    window.open('https://calendly.com/rocco-haro/15min', '_blank');
+  }
   return (
     <div id='panelView' className={styles.wrapperView}>
       <div className={styles.contentView}>
@@ -20,7 +22,7 @@ function Panel() {
           <div className={styles.infoGroup}>
             <span>{`kick back and foster conversations as if you’re actually together`}</span>
             <div className={styles.buttonContainer}>
-              <button>{`See it in action`}</button>
+              <button onClick={actionClick}>{`See it in action`}</button>
             </div>
           </div>
         </div>
@@ -31,12 +33,6 @@ function Panel() {
             height={64}
             src={'/icon/arrowBannerIcon.svg'}
             alt='arrowBannerIcon'
-          />
-          <Image
-            width={166}
-            height={46}
-            src='/button/get-early-access/Get_Early_Access_Default.svg'
-            alt='get early access button default'
           />
         </div>
       </div>

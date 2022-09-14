@@ -18,6 +18,14 @@ const contactData = [
 function ContactItem(props) {
   return <div></div>;
 }
+function getStart() {
+  let easyView = document.getElementById('easyView');
+  easyView.scrollIntoView({ behavior: 'smooth' }, true);
+}
+function faqAction() {
+  let faqView = document.getElementById('questionView');
+  faqView.scrollIntoView({ behavior: 'smooth' }, true);
+}
 
 function Footer() {
   return (
@@ -28,8 +36,11 @@ function Footer() {
           <div className={styles.contactGroup}>
             <div className={styles.firstContact}>
               <div className={styles.leftFooter}>
-                <span>{`How to get started`}</span>
-                <span>{`FAQ`}</span>
+                <span
+                  className='cursor'
+                  onClick={getStart}
+                >{`How to get started`}</span>
+                <span className='cursor' onClick={faqAction}>{`FAQ`}</span>
               </div>
               <div className={styles.rightFooter}>
                 <div className={styles.kickBackSpace}>

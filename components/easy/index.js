@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import styles from './easy.module.scss';
-import easyBanner from '../../public/banner/easyBanner.svg';
 import number1 from '../../public/icon/number-1.svg';
 import number2 from '../../public/icon/number-2.svg';
 import number3 from '../../public/icon/number-3.svg';
@@ -56,9 +55,7 @@ function Easy() {
               icon={item.icon}
             />
           ))}
-          <button
-            className={styles.signUpButton}
-          >{`Get early access now`}</button>
+          <div className={styles.signUpButton}>{`Get early access now`}</div>
         </div>
       </div>
     </div>

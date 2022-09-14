@@ -8,6 +8,7 @@ import VirtualOffice from '../components/virtualOffice';
 import FAQ from '../components/faq';
 import Footer from '../components/footer';
 import Team from '../components/team';
+import GetEarlyAccessView from '../components/earlyAccessView';
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         <Team />
         <FAQ />
         <Footer />
+        <GetEarlyAccessView />
       </main>
     </div>
   );

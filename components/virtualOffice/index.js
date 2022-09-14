@@ -4,6 +4,9 @@ import virtualOfficeBanner from '../../public/banner/virtualOfficeBanner.svg';
 import checkedGreenIcon from '../../public/icon/checkedGreenIcon.svg';
 
 function VirtualOffice() {
+  function actionClick() {
+    window.open('https://calendly.com/rocco-haro/15min', '_blank');
+  }
   return (
     <div id='virtualView' className={styles.wrapperView}>
       <div className={styles.contentView}>
@@ -63,6 +66,7 @@ function VirtualOffice() {
             </span>
           </div>
           <button
+            onClick={actionClick}
             className={`v-mt-32 ${styles.leftViewButton}`}
           >{`See it in action`}</button>
         </div>

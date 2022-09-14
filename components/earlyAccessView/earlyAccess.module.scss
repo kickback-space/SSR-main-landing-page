@@ -1,0 +1,26 @@
+@import 'responsive';
+
+.wrapperView {
+  position: fixed;
+  right: 50px;
+  bottom: 90px;
+  .button {
+    width: 196px;
+    height: 94px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/button/earlyAccess/default.svg');
+    background-size: 100% 100%;
+    border: unset;
+    &:hover {
+      background-image: url('/button/earlyAccess/hover.svg');
+    }
+    &:active {
+      background-image: url('/button/earlyAccess/disable.svg');
+    }
+  }
+  .wrapperForm {
+  }
+}
