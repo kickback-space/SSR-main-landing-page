@@ -22,7 +22,7 @@ function Information() {
           <div className={styles.groupViewInfo}>
             <div className={styles.textInfo}>
               <span
-                className={styles.title}
+                className={styles.titleInfo}
               >{`What we need is a better, more organic communication medium`}</span>
               <span
                 className={styles.infoDesktop}

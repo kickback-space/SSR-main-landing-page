@@ -12,7 +12,6 @@ function VirtualOffice() {
       <div className={styles.contentView}>
         <div className={styles.WrapperRightView}>
           <Image
-            priority={true}
             width={785}
             height={558}
             src={virtualOfficeBanner}
@@ -25,11 +24,7 @@ function VirtualOffice() {
             className={styles.leftViewTitle}
           >{`Run an immersive event `}</span>
           <div className={`v-mt-16 ${styles.leftViewGroup}`}>
-            <Image
-              priority={true}
-              src={checkedGreenIcon}
-              alt='checkedGreenIcon1'
-            />
+            <Image src={checkedGreenIcon} alt='checkedGreenIcon1' />
             <span className={styles.leftViewGroupInfo}>
               {` Become an `}
               <span
@@ -38,11 +33,7 @@ function VirtualOffice() {
             </span>
           </div>
           <div className={`v-mt-16 ${styles.leftViewGroup}`}>
-            <Image
-              priority={true}
-              src={checkedGreenIcon}
-              alt='checkedGreenIcon2'
-            />
+            <Image src={checkedGreenIcon} alt='checkedGreenIcon2' />
             <span className={styles.leftViewGroupInfo}>
               {`Increase `}
               <span
@@ -53,11 +44,7 @@ function VirtualOffice() {
             </span>
           </div>
           <div className={`v-mt-16 ${styles.leftViewGroup}`}>
-            <Image
-              priority={true}
-              src={checkedGreenIcon}
-              alt='checkedGreenIcon3'
-            />
+            <Image src={checkedGreenIcon} alt='checkedGreenIcon3' />
             <span className={styles.leftViewGroupInfo}>
               {`Spark `}
               <span

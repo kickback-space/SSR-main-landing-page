@@ -1,7 +1,10 @@
 @import 'responsive';
 
 .wrapperView {
-  margin-top: 6vh;
+  @include desktop {
+    margin-top: 63px;
+  }
+  margin-top: 48px;
   text-align: center;
   background: linear-gradient(
     269.05deg,
@@ -47,8 +50,9 @@
       box-shadow: 10px 20px 20px rgba(236, 236, 236, 0.29);
       border-radius: 24px;
       .groupViewInfo {
+        padding: 40px;
         @include desktop {
-          margin: 48px 16px 48px 16px;
+          padding: 56px;
           flex-direction: row;
           justify-content: space-between;
           .infoMobile {
@@ -56,9 +60,9 @@
           }
           .infoDesktop {
             font-size: 32px;
-            margin: 24px 32px 32px 32px;
+            margin-top: 24px;
             font-weight: bold;
-            line-height: 190%;
+            line-height: 175%;
             color: #f0a03f;
           }
         }
@@ -75,9 +79,10 @@
           text-align: left;
           justify-content: center;
         }
-        .title {
+        .titleInfo {
           @include desktop {
             font-size: 24px;
+            line-height: 184%;
           }
           font-weight: bold;
           font-size: 18px;
@@ -85,7 +90,7 @@
           color: #254261;
         }
         .infoMobile {
-          margin: 24px 32px 32px 32px;
+          margin-top: 32px;
           font-weight: bold;
           font-size: 20px;
           line-height: 190%;
@@ -95,6 +100,9 @@
       .groupViewBanner {
         position: relative;
         width: 100%;
+        @include mobile {
+          margin-top: 32px;
+        }
       }
     }
   }
