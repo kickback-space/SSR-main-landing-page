@@ -1,36 +1,38 @@
 import Head from 'next/head';
 import Header from '../components/header';
 import Panel from '../components/panel';
-import FirstInformation from '../components/firstInformation';
+import Information from '../components/information';
 import Value from '../components/value';
 import Easy from '../components/easy';
 import VirtualOffice from '../components/virtualOffice';
-import LineView from '../components/lineView';
-import VirtualEvent from '../components/virtualEvent';
-import Professional from '../components/professional';
+import FAQ from '../components/faq';
 import Footer from '../components/footer';
+import Team from '../components/team';
+import GetEarlyAccessView from '../components/earlyAccessView';
 
 export default function Home() {
   return (
     <div>
       <Head>
         <title>Kickback space Inc</title>
-        <meta name="description" content="Introducing the best way to be present online: photo-realistic virtual environments, video & audio enhancement, and bleeding-edge communication features"/>
-        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name='description'
+          content='Introducing the best way to be present online: photo-realistic virtual environments, video & audio enhancement, and bleeding-edge communication features'
+        />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
-
       <main>
-        <Header/>
-        <Panel/>
-        <FirstInformation/>
-        <Value/>
-        <Easy/>
-        <VirtualOffice/>
-        <LineView/>
-        <VirtualEvent/>
-        <Professional/>
-        <Footer/>
+        <Header />
+        <Panel />
+        <Information />
+        <VirtualOffice />
+        <Easy />
+        <Value />
+        <Team />
+        <FAQ />
+        <Footer />
+        <GetEarlyAccessView />
       </main>
     </div>
-  )
+  );
 }

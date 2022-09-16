@@ -1,0 +1,119 @@
+@import 'responsive';
+
+.wrapperView {
+  position: fixed;
+  right: 50px;
+  bottom: 90px;
+  z-index: 999;
+  @include smallMobile {
+    right: 16px;
+    bottom: 16px;
+  }
+  .button {
+    width: 196px;
+    height: 94px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/button/earlyAccess/default.svg');
+    background-size: 100% 100%;
+    border: unset;
+    &:hover {
+      background-image: url('/button/earlyAccess/hover.svg');
+    }
+    &:active {
+      background-image: url('/button/earlyAccess/disable.svg');
+    }
+  }
+  .wrapperForm {
+    display: flex;
+    flex-direction: column;
+    background-color: #F0A03F;
+    border: 1px solid #F0A03F;
+    box-shadow: 0px 10px 20px #FFE4C2;
+    border-radius: 12px;
+    padding: 24px;;
+    width: 346px;
+    @include smallMobile {
+      width: calc(100vw - 32px - 16px - 50px);
+    }
+    .headerForm{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      span{
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 190%;
+        color: #FFFFFF;
+      }
+      img {
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+      }
+    }
+    .emailLabel {
+      margin-top: 24px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 200%;
+      color: #FFFFFF;
+    }
+    .inputView {
+      padding: 10px 15px;
+      background: #FFFFFF;
+      border: unset;
+      border-radius: 8px;
+      font-size: 14px;
+      line-height: 200%;
+      letter-spacing: 0.005em;
+      color: #254261;
+      outline: unset;
+    }
+    .inputSuccess {
+      border: 1px solid #00BA88!important;
+      color: #00BA88!important;
+    }
+    .inputError {
+      border: 1px solid #FF243E!important;
+      color: #FF243E!important;
+    }
+    .messageView {
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+      line-height: 214%;
+      font-weight: 400;
+      background-color: #F3FEFF;
+      border-radius: 8px;
+      padding: 8px;
+      .title {
+        font-weight: 600;
+      }
+    }
+    .successState {
+      color: #00BA88;
+    }
+    .errorState {
+      color: #FF243E;
+      background-color: #FFD3D8;;
+    }
+    .submitButton {
+      margin-top: 16px;
+      background-color: #FCC179;
+      border-radius: 8px;
+      height: 48px;
+      padding: unset;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 214%;
+      color: #FFFFFF;
+    }
+  }
+}

@@ -1,29 +1,53 @@
 import Image from 'next/image';
-import styles from './panel.module.scss'
-import videoBanner from '../../public/banner/videoBanner.svg';
-import arrowBannerIcon from '../../public/icon/arrowBannerIcon.svg';
-import backgroundImageBanner from '../../public/banner/backgroundImageBanner.png';
+import styles from './panel.module.scss';
+import * as React from 'react';
 
 function Panel() {
-    return(
-        <div className={styles.wrapperView}>
-            <div className={styles.contentView}>
-                <div className={styles.titleGroup}>
-                    <span>{`Kick back and foster authentic conversations - from anywhere`}</span>
-                    <button>{`See it in action`}</button>
-                    <div className={`v-mt-114 cursor`}>
-                        <Image src={arrowBannerIcon} alt="arrowBannerIcon"/>
-                    </div>
-                </div>
-                <div className={styles.videoGroup}>
-                    <Image src={videoBanner} alt="videoBanner"/>
-                </div>
+  function handleTransitionNextView() {
+    let nextView = document.getElementById('informationView');
+    nextView.scrollIntoView({ behavior: 'smooth' }, true);
+  }
+  function actionClick() {
+    window.open('https://calendly.com/rocco-haro/15min', '_blank');
+  }
+  return (
+    <div id='panelView' className={styles.wrapperView}>
+      <div className={styles.contentView}>
+        <div className={styles.titleGroup}>
+          <div className={styles.videoGroup}>
+            <video autoPlay muted loop>
+              <source src='/video/mainVideo.mp4' type='video/mp4' />
+            </video>
+          </div>
+          <div className={styles.infoGroup}>
+            <span>{`kick back and foster conversations as if you’re actually together`}</span>
+            <div className={styles.buttonContainer}>
+              <button onClick={actionClick}>{`See it in action`}</button>
             </div>
-            <div className={styles.layoutImage}>
-                <Image src={backgroundImageBanner} alt="backgroundImageBanner"/>
-            </div>
+          </div>
         </div>
-    )
+        <div className={`${styles.bottomPanel} v-mt-27 cursor`}>
+          <Image
+            onClick={handleTransitionNextView}
+            width={64}
+            height={64}
+            src={'/icon/arrowBannerIcon.svg'}
+            alt='arrowBannerIcon'
+          />
+        </div>
+      </div>
+      <div className={styles.layoutImage}>
+        <div>
+          <Image
+            layout='fill'
+            src={'/banner/backgroundImageBanner.png'}
+            alt='backgroundImageBanner'
+            priority
+          />
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Panel;
+export default React.memo(Panel);
