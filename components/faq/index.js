@@ -1,25 +1,15 @@
-import { useEffect } from 'react';
+import { useState, memo } from 'react';
 import styles from './faq.module.scss';
 import Accordion from '../according';
 
 function FAQ() {
-  useEffect(() => {
-    var coll = document.getElementsByClassName('question_collapsible__eL14B');
-    var i;
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener('click', function () {
-        this.classList.toggle('active');
-        var content = this.nextElementSibling;
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
-        } else {
-          content.style.maxHeight = content.scrollHeight + 'px';
-        }
-      });
-    }
-  }, []);
+  const [indexActive, setIndexActive] = useState(null);
+  function updateStateAccordion(indexAccordion) {
+    setIndexActive(indexAccordion);
+  }
+
   return (
-    <div id='questionView' className={styles.wrapperView}>
+    <div id='faqView' className={styles.wrapperView}>
       <div className={styles.contentView}>
         <div className={styles.titleGroup}>
           <span className={styles.title}>{'Frequently Asked Questions'}</span>
@@ -27,6 +17,9 @@ function FAQ() {
             <Accordion
               type='question'
               title={'What hardware do I need to use Kickback?'}
+              toggleAccordion={updateStateAccordion}
+              active={indexActive === 1}
+              indexAccordion={1}
             >
               <div className={styles.content}>
                 <div className={styles.divine} />
@@ -42,6 +35,9 @@ function FAQ() {
             <Accordion
               type='question'
               title={'Through what network is my video processed?'}
+              toggleAccordion={updateStateAccordion}
+              active={indexActive === 2}
+              indexAccordion={2}
             >
               <div className={styles.content}>
                 <div className={styles.divine} />
@@ -57,6 +53,9 @@ function FAQ() {
             <Accordion
               type='question'
               title={'Does kick back care about privacy?'}
+              toggleAccordion={updateStateAccordion}
+              active={indexActive === 3}
+              indexAccordion={3}
             >
               <div className={styles.content}>
                 <div className={styles.divine} />
@@ -74,4 +73,4 @@ function FAQ() {
   );
 }
 
-export default FAQ;
+export default memo(FAQ);

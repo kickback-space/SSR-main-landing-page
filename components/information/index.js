@@ -11,10 +11,10 @@ function Information() {
           >{`2D video limits our ability to communicate naturally online`}</span>
           <div className={styles.videoBanner}>
             <Image
-              width={1153}
-              height={574}
-              src={'/banner/videoBannerFirstInformation.svg'}
+              src={'/banner/videoBannerFirstInformation.png'}
               alt={`videoBannerFirstInformation`}
+              width={985}
+              height={462}
             />
           </div>
         </div>
@@ -33,7 +33,7 @@ function Information() {
               <Image
                 width={530}
                 height={530}
-                src={'/banner/groupBannerFirstInformation.svg'}
+                src={'/banner/groupBannerFirstInformation.png'}
                 alt={`groupBannerFirstInformation`}
               />
             </div>

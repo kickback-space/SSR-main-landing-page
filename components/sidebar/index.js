@@ -18,8 +18,7 @@ function Sidebar(props) {
   function FAQ() {
     toggleSidebar();
     setTimeout(() => {
-      faqView.scrollIntoView({ behavior: 'smooth' }, true);
-      let faqView = document.getElementById('questionView');
+      let faqView = document.getElementById('faqView');
       faqView.scrollIntoView({ behavior: 'smooth' }, true);
     }, 200);
   }

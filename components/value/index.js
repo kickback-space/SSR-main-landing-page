@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styles from './value.module.scss';
-import noEyeContact from '../../public/banner/noEyeContactBanner.svg';
-import eyeContact from '../../public/banner/eyeContactBanner.svg';
+import noEyeContact from '../../public/banner/noEyeContactBanner.png';
+import eyeContact from '../../public/banner/eyeContactBanner.png';
 
 function Value() {
   return (

@@ -11,7 +11,7 @@ function Header() {
   }
 
   function FAQ() {
-    let faqView = document.getElementById('questionView');
+    let faqView = document.getElementById('faqView');
     faqView.scrollIntoView({ behavior: 'smooth' }, true);
   }
 

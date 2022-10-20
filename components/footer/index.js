@@ -4,26 +4,12 @@ import Insta from '../../public/icon/insta.svg';
 import Email from '../../public/icon/email.svg';
 import LogoNoColor from '../../public/icon/logoNoColor.svg';
 
-const contactData = [
-  {
-    info: 'kickback.space',
-    icon: 'kickback.space',
-  },
-  {
-    info: 'support@kickback.space',
-    icon: 'support@kickback.space',
-  },
-];
-
-function ContactItem(props) {
-  return <div></div>;
-}
 function getStart() {
   let easyView = document.getElementById('easyView');
   easyView.scrollIntoView({ behavior: 'smooth' }, true);
 }
 function faqAction() {
-  let faqView = document.getElementById('questionView');
+  let faqView = document.getElementById('faqView');
   faqView.scrollIntoView({ behavior: 'smooth' }, true);
 }
 
@@ -52,12 +38,6 @@ function Footer() {
                   <p>{`support@kickback.space`}</p>
                 </div>
               </div>
-            </div>
-
-            <div>
-              {contactData.map((item, index) => (
-                <ContactItem key={index} data={item} />
-              ))}
             </div>
           </div>
         </div>

@@ -42,7 +42,7 @@ function Panel() {
             layout='fill'
             src={'/banner/backgroundImageBanner.png'}
             alt='backgroundImageBanner'
-            priority
+            objectFit='fill'
           />
         </div>
       </div>

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './virtualOffice.module.scss';
-import virtualOfficeBanner from '../../public/banner/virtualOfficeBanner.svg';
+import virtualOfficeBanner from '../../public/banner/virtualOfficeBanner.png';
 import checkedGreenIcon from '../../public/icon/checkedGreenIcon.svg';
 
 function VirtualOffice() {
