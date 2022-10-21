@@ -42,6 +42,9 @@
         font-size: 18px;
         line-height: 190%;
         color: #258099;
+        &:hover {
+          color: #46bfc7;
+        }
       }
       .actionButton {
         width: 182px;

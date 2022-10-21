@@ -67,27 +67,6 @@
         }
       }
     }
-    .bottomPanel {
-      display: none;
-      @include desktop {
-        display: flex;
-        justify-content: space-between;
-        padding-left: 7vw;
-        padding-right: 7vw;
-        button {
-          background: linear-gradient(90deg, #ffae4b 0%, #fdc431 100%);
-          margin-top: 24px;
-          margin-bottom: 24px;
-          width: 166px;
-          height: 64px;
-          border-radius: 12px;
-          font-weight: 600;
-          font-size: 18px;
-          line-height: 190%;
-          color: #fff1df;
-        }
-      }
-    }
   }
   .layoutImage {
     top: 0;

@@ -17,7 +17,7 @@
     align-items: center;
     @include desktop {
       flex-direction: row;
-      grid-gap: 102px;
+      justify-content: space-between;
     }
     .easyBanner {
       background: #ffffff;

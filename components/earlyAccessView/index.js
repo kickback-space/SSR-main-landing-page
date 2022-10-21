@@ -1,6 +1,7 @@
 import styles from './earlyAccess.module.scss';
 import React from 'react';
 import axios from 'axios';
+import Image from 'next/image';
 
 const FORM_STATE = {
   INIT: 'INIT',
@@ -119,14 +120,51 @@ function SubmitForm(props) {
 function EarlyAccessView() {
   const [isOpenForm, setIsOpenFrom] = React.useState(false);
 
+  React.useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   function openForm() {
     setIsOpenFrom(true);
   }
   function hideForm() {
     setIsOpenFrom(false);
   }
+  function handleScroll() {
+    let isHiddenNextView = window.scrollY > 100;
+    let el = document.getElementById('nextView');
+    if (el) {
+      if (el.classList.contains('isVisibleIcon') && !isHiddenNextView) {
+        el.classList.remove('isVisibleIcon');
+        el.style.visibility = '';
+        return;
+      }
+      if (!el.classList.contains('isVisibleIcon') && isHiddenNextView) {
+        el.classList.add('isVisibleIcon');
+        el.style.visibility = 'hidden';
+        return;
+      }
+    }
+  }
+
+  function handleTransitionNextView() {
+    let nextView = document.getElementById('informationView');
+    nextView.scrollIntoView({ behavior: 'smooth' }, true);
+  }
   return (
     <div id='earlyAccessView' className={styles.wrapperView}>
+      <div id='nextView' className={`${styles.bottomPanel} cursor`}>
+        <Image
+          onClick={handleTransitionNextView}
+          layout='fill'
+          objectFit='contain'
+          src={'/icon/arrowBannerIcon.svg'}
+          alt='arrowBannerIcon'
+        />
+      </div>
       {isOpenForm ? (
         <SubmitForm hiddenForm={hideForm} />
       ) : (

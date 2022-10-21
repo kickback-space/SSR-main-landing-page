@@ -3,10 +3,6 @@ import styles from './panel.module.scss';
 import * as React from 'react';
 
 function Panel() {
-  function handleTransitionNextView() {
-    let nextView = document.getElementById('informationView');
-    nextView.scrollIntoView({ behavior: 'smooth' }, true);
-  }
   function actionClick() {
     window.open('https://calendly.com/rocco-haro/15min', '_blank');
   }
@@ -25,15 +21,6 @@ function Panel() {
               <button onClick={actionClick}>{`See it in action`}</button>
             </div>
           </div>
-        </div>
-        <div className={`${styles.bottomPanel} v-mt-27 cursor`}>
-          <Image
-            onClick={handleTransitionNextView}
-            width={64}
-            height={64}
-            src={'/icon/arrowBannerIcon.svg'}
-            alt='arrowBannerIcon'
-          />
         </div>
       </div>
       <div className={styles.layoutImage}>
