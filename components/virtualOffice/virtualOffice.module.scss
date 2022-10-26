@@ -38,6 +38,12 @@
       .leftViewGroup {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        .imageIcon {
+          width: 20px;
+          height: 20px;
+          position: relative;
+        }
         .leftViewGroupInfo {
           margin-left: 16px;
           font-weight: 600;
