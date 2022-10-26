@@ -24,14 +24,13 @@ function Panel() {
         </div>
       </div>
       <div className={styles.layoutImage}>
-        <div>
-          <Image
-            layout='fill'
-            src={'/banner/backgroundImageBanner.png'}
-            alt='backgroundImageBanner'
-            objectFit='fill'
-          />
-        </div>
+        <Image
+          layout='responsive'
+          src={'/banner/backgroundImageBanner.png'}
+          alt='backgroundImageBanner'
+          width={1440}
+          height={800}
+        />
       </div>
     </div>
   );
