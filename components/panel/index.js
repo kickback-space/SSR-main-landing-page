@@ -30,6 +30,7 @@ function Panel() {
           alt='backgroundImageBanner'
           width={1440}
           height={800}
+          priority
         />
       </div>
     </div>
