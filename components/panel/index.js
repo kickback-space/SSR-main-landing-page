@@ -28,7 +28,7 @@ function Panel() {
           layout='responsive'
           src={'/banner/backgroundImageBanner.png'}
           alt='backgroundImageBanner'
-          width={1440}
+          width={1080}
           height={800}
           priority
         />
