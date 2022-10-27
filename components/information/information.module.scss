@@ -1,10 +1,10 @@
 @import 'responsive';
 
 .wrapperView {
+  margin-top: 24px;
   @include desktop {
-    margin-top: 63px;
+    margin-top: unset;
   }
-  margin-top: 48px;
   text-align: center;
   background: linear-gradient(
     269.05deg,
@@ -29,18 +29,25 @@
       flex-direction: column;
     }
     .title {
-      @include desktop {
-        font-size: 32px;
-      }
-      margin: 48px 32px 32px 32px;
+      margin-top: 48px;
       font-weight: 600;
       font-size: 20px;
       line-height: 190%;
       color: #254261;
+      @include desktop {
+        margin-top: 97px;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 175%;
+      }
     }
     .videoBanner {
-      margin-top: 48px;
       margin: auto;
+      margin-top: 24px;
+      @include desktop {
+        margin: auto;
+        margin-top: 56px;
+      }
     }
     .groupView {
       @include desktop {
@@ -79,6 +86,9 @@
           flex-direction: column;
           text-align: left;
           justify-content: center;
+          @include mobile {
+            text-align: center;
+          }
         }
         .titleInfo {
           @include desktop {
