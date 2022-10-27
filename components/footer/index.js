@@ -29,13 +29,27 @@ function Footer() {
                 <span className='cursor' onClick={faqAction}>{`FAQ`}</span>
               </div>
               <div className={styles.rightFooter}>
-                <div className={styles.kickBackSpace}>
-                  <Image src={Insta} alt='instaIcon' />
-                  <p>{`kickback.space`}</p>
+                <div className={styles.rightContent}>
+                  <div className={styles.wrapperImage}>
+                    <Image
+                      layout='fill'
+                      objectFit='contain'
+                      src={Insta}
+                      alt='instaIcon'
+                    />
+                  </div>
+                  <span>{`kickback.space`}</span>
                 </div>
-                <div className={styles.kickBackSupport}>
-                  <Image src={Email} alt='emailIcon' />
-                  <p>{`support@kickback.space`}</p>
+                <div className={styles.rightContent}>
+                  <div className={styles.wrapperImage}>
+                    <Image
+                      layout='fill'
+                      objectFit='contain'
+                      src={Email}
+                      alt='emailIcon'
+                    />
+                  </div>
+                  <span>{`support@kickback.space`}</span>
                 </div>
               </div>
             </div>
