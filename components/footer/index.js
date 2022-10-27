@@ -56,7 +56,14 @@ function Footer() {
           </div>
         </div>
         <div className={styles.logoGroup}>
-          <Image src={LogoNoColor} alt='logo' />
+          <div className={styles.wrapperImage}>
+            <Image
+              layout='fill'
+              objectFit='contain'
+              src={LogoNoColor}
+              alt='logo'
+            />
+          </div>
           <span>{`Copyright reserved by Kickback Space Inc, 2021`}</span>
         </div>
       </div>

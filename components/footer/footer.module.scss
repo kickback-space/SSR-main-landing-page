@@ -69,17 +69,32 @@
     flex-direction: column;
     text-align: center;
     border-top: 1px solid #b8b8b8;
-    span {
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 200%;
-      letter-spacing: 0.005em;
-      color: #b8b8b8;
-    }
+    align-items: center;
     @include desktop {
       padding: 51px 5vw 64px 5vw;
       flex-direction: row;
       justify-content: space-between;
+    }
+    .wrapperImage {
+      position: relative;
+      width: 133px;
+      height: 32px;
+      @include desktop {
+        width: 200px;
+        height: 48px;
+      }
+    }
+    span {
+      font-size: 14px;
+      line-height: 200%;
+      letter-spacing: 0.005em;
+      color: #b8b8b8;
+      margin-top: 16px;
+      @include desktop {
+        margin-top: unset;
+        font-size: 18px;
+        line-height: 194%;
+      }
     }
   }
 }

@@ -15,19 +15,21 @@
     align-items: center;
     grid-gap: 24px;
     .wrapperLeftView {
-      @include desktop {
-        flex: 1;
-        margin-right: -80px;
-        width: unset;
-      }
-      width: calc(100% - 90px);
+      padding: 32px;
+      width: calc(100% - 64px);
       z-index: 2;
       display: flex;
       flex-direction: column;
       background: linear-gradient(180.05deg, #e0fcff 0.04%, #f3feff 99.96%);
       box-shadow: 10px 20px 20px rgb(236 236 236 / 29%);
       border-radius: 24px;
-      padding: 32px 40px;
+      @include desktop {
+        flex: 1;
+        margin-right: -80px;
+        width: unset;
+        padding: 32px 40px;
+        width: calc(100% - 80px);
+      }
       .leftViewTitle {
         font-weight: bold;
         font-size: 18px;
@@ -63,6 +65,10 @@
         font-size: 18px;
         line-height: 190%;
         color: #ffffff;
+        margin: auto;
+        @include desktop {
+          margin: unset;
+        }
       }
     }
     .WrapperRightView {
