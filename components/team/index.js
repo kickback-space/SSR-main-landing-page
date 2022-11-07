@@ -8,8 +8,6 @@ import Alvin from '../../public/team/engineerAlvin.png';
 import Phat from '../../public/team/engineerPhat.png';
 import Trinh from '../../public/team/engineerTrinh.png';
 import Bogdan from '../../public/team/engineerBogdan.png';
-import Kevin from '../../public/team/engineerKevin.png';
-import Yannis from '../../public/team/engineerYannis.png';
 
 // Designer an User Experience team
 import Pankhuri from '../../public/team/designerPankhuri.png';
@@ -63,18 +61,6 @@ const engineerPeopleData = [
     avatar: Trinh,
     name: 'Trinh Dong',
     position: 'Frontend Engineer',
-    published: false,
-  },
-  {
-    avatar: Kevin,
-    name: 'Kelvin Yankey',
-    position: 'Software Engineer',
-    published: false,
-  },
-  {
-    avatar: Yannis,
-    name: 'Yannis Mekaouche',
-    position: 'Infrastructure Engineer',
     published: false,
   },
 ];

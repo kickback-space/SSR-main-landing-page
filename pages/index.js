@@ -28,8 +28,8 @@ export default function Home() {
         <VirtualOffice />
         <Easy />
         <Value />
-        <Team />
         <FAQ />
+        <Team />
         <Footer />
         <GetEarlyAccessView />
       </main>

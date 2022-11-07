@@ -55,6 +55,7 @@ function Footer() {
             </div>
           </div>
         </div>
+        <div className={styles.line} />
         <div className={styles.logoGroup}>
           <div className={styles.wrapperImage}>
             <Image

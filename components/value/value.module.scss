@@ -10,6 +10,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include desktop {
+      margin: 118px 100px 5vw 100px;
+    }
     .title {
       @include desktop {
         font-size: 32px;

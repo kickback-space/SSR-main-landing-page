@@ -11,6 +11,7 @@
     .firstContact {
       margin: 0 5vw 0 5vw;
       @include desktop {
+        margin: 0 100px 0 100px;
         flex-direction: row;
         justify-content: space-between;
       }
@@ -51,7 +52,7 @@
             font-weight: 400;
             font-size: 18px;
             line-height: 37px;
-            color: #46BFC7;
+            color: #46bfc7;
           }
         }
       }
@@ -63,15 +64,20 @@
       color: #46bfc7;
     }
   }
+  .line {
+    width: calc(100% - 200px);
+    margin: auto;
+    height: 1px;
+    background-color: #b8b8b8;
+  }
   .logoGroup {
     padding: 51px 16px 64px 16px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    border-top: 1px solid #b8b8b8;
     align-items: center;
     @include desktop {
-      padding: 51px 5vw 64px 5vw;
+      padding: 51px 100px 64px 100px;
       flex-direction: row;
       justify-content: space-between;
     }

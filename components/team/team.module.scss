@@ -7,6 +7,9 @@
   );
   .contentView {
     padding: 24px 5vw 24px 5vw;
+    @include desktop {
+      padding: 24px 100px 24px 100px;
+    }
     .titleGroup {
       display: flex;
       flex-direction: column;
