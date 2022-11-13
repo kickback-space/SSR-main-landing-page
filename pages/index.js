@@ -9,8 +9,17 @@ import FAQ from '../components/faq';
 import Footer from '../components/footer';
 import Team from '../components/team';
 import GetEarlyAccessView from '../components/earlyAccessView';
+import { useState } from 'react';
 
 export default function Home() {
+  const [isOpenForm, setIsOpenForm] = useState(false);
+
+  function openFormFromParent() {
+    setIsOpenForm(true);
+  }
+  function closeFormFromParent() {
+    setIsOpenForm(false);
+  }
   return (
     <div>
       <Head>
@@ -26,12 +35,15 @@ export default function Home() {
         <Panel />
         <Information />
         <VirtualOffice />
-        <Easy />
+        <Easy openForm={isOpenForm} openFormFromParent={openFormFromParent} />
         <Value />
         <FAQ />
         <Team />
         <Footer />
-        <GetEarlyAccessView />
+        <GetEarlyAccessView
+          openForm={isOpenForm}
+          closeFormFromParent={closeFormFromParent}
+        />
       </main>
     </div>
   );

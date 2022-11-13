@@ -83,9 +83,16 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
         @include desktop {
           margin: unset;
           margin-top: 40px;
+          &:hover {
+            background-color: #00ba88;
+          }
+          &:active {
+            background-color: #46bfc7;
+          }
         }
       }
     }

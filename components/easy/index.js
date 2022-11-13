@@ -34,7 +34,12 @@ function GroupItemView(props) {
   );
 }
 
-function Easy() {
+function Easy(props) {
+  function handleClickOpenForm() {
+    if (!props.openForm) {
+      props.openFormFromParent();
+    }
+  }
   return (
     <div id='easyView' className={styles.wrapperView}>
       <div className={styles.contentView}>
@@ -55,7 +60,10 @@ function Easy() {
               icon={item.icon}
             />
           ))}
-          <div className={styles.signUpButton}>{`Get early access now`}</div>
+          <div
+            onClick={handleClickOpenForm}
+            className={styles.signUpButton}
+          >{`Get early access now`}</div>
         </div>
       </div>
     </div>

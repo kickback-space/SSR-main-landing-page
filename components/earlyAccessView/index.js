@@ -117,7 +117,7 @@ function SubmitForm(props) {
     </div>
   );
 }
-function EarlyAccessView() {
+function EarlyAccessView(props) {
   const [isOpenForm, setIsOpenFrom] = React.useState(false);
 
   React.useEffect(() => {
@@ -127,11 +127,21 @@ function EarlyAccessView() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  React.useEffect(() => {
+    if (props.openForm) {
+      setIsOpenFrom(true);
+    }
+  }, [props]);
+
   function openForm() {
     setIsOpenFrom(true);
   }
   function hideForm() {
     setIsOpenFrom(false);
+    if (props.openForm) {
+      props.closeFormFromParent();
+    }
   }
   function handleScroll() {
     let isHiddenNextView = window.scrollY > 100;
