@@ -178,7 +178,7 @@ function EarlyAccessView(props) {
       {isOpenForm ? (
         <SubmitForm hiddenForm={hideForm} />
       ) : (
-        <div className={styles.button} onClick={openForm} />
+        <button className={styles.button} onClick={openForm} />
       )}
     </div>
   );

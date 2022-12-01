@@ -8,7 +8,7 @@ function Information() {
         <div className={styles.firstContentWrapper}>
           <span
             className={styles.title}
-          >{`2D video limits our ability to communicate naturally online`}</span>
+          >{`The traditional way kills group meetings & events`}</span>
           <div className={styles.videoBanner}>
             <Image
               src={'/banner/videoBannerFirstInformation.png'}

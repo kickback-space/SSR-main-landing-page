@@ -6,7 +6,7 @@ import number3 from '../../public/icon/number-3.svg';
 
 const data = [
   {
-    text: `Create & brand your space`,
+    text: `Select an environment`,
     icon: number1,
   },
   {

@@ -65,7 +65,7 @@ function Footer() {
               alt='logo'
             />
           </div>
-          <span>{`Copyright reserved by Kickback Space Inc, 2021`}</span>
+          <span>{`Copyright reserved by Kickback Space Inc, 2023`}</span>
         </div>
       </div>
     </div>

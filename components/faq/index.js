@@ -5,7 +5,8 @@ import Accordion from '../according';
 function FAQ() {
   const [indexActive, setIndexActive] = useState(null);
   function updateStateAccordion(indexAccordion) {
-    setIndexActive(indexAccordion);
+    let result = indexActive === indexAccordion ? null : indexAccordion;
+    setIndexActive(result);
   }
 
   return (
@@ -25,7 +26,7 @@ function FAQ() {
                 <div className={styles.divine} />
                 <span>
                   {
-                    'All you need is a web camera and a microphone! We built Kickback with accessibility in mind, so you don’t have to worry about purchasing any additional hardware.'
+                    'All you need is a web camera and a microphone! We designed kick back with accessibility in mind, so you don’t have to worry about purchasing any additional hardware. '
                   }
                 </span>
               </div>
@@ -43,7 +44,7 @@ function FAQ() {
                 <div className={styles.divine} />
                 <span>
                   {
-                    'Everything enters through Google’s high speed network, and can go through either Google, Microsoft, Lumen, Oracle, or AWS’ private networks. It all depends on where you are; since we strive to give you the fastest connection we hook our network into various cloud providers. '
+                    'Everything enters through Google’s high speed network, and can go through either Google, Microsoft, Lumen, Oracle, or AWS’ private networks. It all depends on where you are; we strive to deliver the best experience and as a result are cloud-agnostic. '
                   }
                 </span>
               </div>
@@ -61,7 +62,7 @@ function FAQ() {
                 <div className={styles.divine} />
                 <span>
                   {
-                    'Privacy is everything to us. Your data is always yours; you can choose to remove some or all data that is used to improve your experience within kick back. Our business model is soley dependent on providing you the best experience. In other words, we will never sell user data to 3rd parties. '
+                    'Privacy is everything to us. Your data is always yours; you can choose to remove some or all data that is used to improve your experience within kick back. Our business model is soley dependent on delivering the best experience.'
                   }
                 </span>
               </div>
