@@ -25,6 +25,8 @@
       line-height: 194%;
       letter-spacing: 0.005em;
       color: #254261;
+      position: relative;
+      text-align: center;
     }
     .groupEyeView {
       position: relative;
@@ -34,8 +36,8 @@
         height: 492px;
       }
       margin-top: 32px;
-      width: 90%;
-      height: 300px;
+      width: 80%;
+      height: 50vw;
     }
   }
 }
