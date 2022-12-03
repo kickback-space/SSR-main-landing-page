@@ -1,9 +1,10 @@
 import styles from './earlyAccess.module.scss';
 import React from 'react';
 import Image from 'next/image';
-function EarlyAccessView(props) {
-  const [isOpenForm, setIsOpenFrom] = React.useState(false);
+import { usePlausible } from 'next-plausible';
 
+function EarlyAccessView() {
+  const plausible = usePlausible();
   React.useEffect(() => {
     window.addEventListener('scroll', handleScroll);
 
@@ -16,7 +17,7 @@ function EarlyAccessView(props) {
     window.open(
       'https://xtm50lcgfwe.typeform.com/to/cTz6CDkh?typeform-source=landing_page_desktop'
     );
-    setIsOpenFrom(true);
+    plausible('SignUp');
   }
 
   function handleScroll() {

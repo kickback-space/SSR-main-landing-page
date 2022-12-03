@@ -1,10 +1,13 @@
 import Image from 'next/image';
 import styles from './panel.module.scss';
 import * as React from 'react';
+import { usePlausible } from 'next-plausible';
 
 function Panel() {
+  const plausible = usePlausible();
   function actionClick() {
     window.open('https://calendly.com/rocco-haro/15min', '_blank');
+    plausible('SeeItInAction');
   }
   return (
     <div id='panelView' className={styles.wrapperView}>

@@ -3,6 +3,7 @@ import styles from './easy.module.scss';
 import number1 from '../../public/icon/number-1.svg';
 import number2 from '../../public/icon/number-2.svg';
 import number3 from '../../public/icon/number-3.svg';
+import { usePlausible } from 'next-plausible';
 
 const data = [
   {
@@ -34,11 +35,13 @@ function GroupItemView(props) {
   );
 }
 
-function Easy(props) {
+function Easy() {
+  const plausible = usePlausible();
   function handleClickOpenForm() {
-    if (!props.openForm) {
-      props.openFormFromParent();
-    }
+    window.open(
+      'https://xtm50lcgfwe.typeform.com/to/cTz6CDkh?typeform-source=landing_page_desktop'
+    );
+    plausible('SignUp');
   }
   return (
     <div id='easyView' className={styles.wrapperView}>

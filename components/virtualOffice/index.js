@@ -2,10 +2,13 @@ import Image from 'next/image';
 import styles from './virtualOffice.module.scss';
 import virtualOfficeBanner from '../../public/banner/virtualOfficeBanner.png';
 import checkedGreenIcon from '../../public/icon/checkedGreenIcon.svg';
+import { usePlausible } from 'next-plausible';
 
 function VirtualOffice() {
+  const plausible = usePlausible();
   function actionClick() {
     window.open('https://calendly.com/rocco-haro/15min', '_blank');
+    plausible('SeeItInAction');
   }
   return (
     <div id='virtualView' className={styles.wrapperView}>
