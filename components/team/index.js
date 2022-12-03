@@ -22,7 +22,6 @@ import Yossi from '../../public/team/advisorYossi.png';
 
 // founder team
 import Rocco from '../../public/team/founderRocco.png';
-import Erfan from '../../public/team/founderErfan.png';
 import { useState } from 'react';
 
 const engineerPeopleData = [
@@ -114,14 +113,8 @@ const founder = [
   {
     avatar: Rocco,
     name: 'Rocco Haro',
-    position: 'Principal',
+    position: 'CEO',
     published: true,
-  },
-  {
-    avatar: Erfan,
-    name: 'Erfan Eshratifar',
-    position: 'Chief ML Scientists',
-    published: false,
   },
 ];
 
