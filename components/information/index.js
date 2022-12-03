@@ -23,10 +23,10 @@ function Information() {
             <div className={styles.textInfo}>
               <span
                 className={styles.titleInfo}
-              >{`What we need is a better, more organic communication medium`}</span>
+              >{`What we need is a more natural conferencing solution`}</span>
               <span
                 className={styles.infoDesktop}
-              >{`So we can kick back and feel connected again`}</span>
+              >{`So everyone can become a non-disruptive active participant`}</span>
             </div>
 
             <div className={styles.groupViewBanner}>
