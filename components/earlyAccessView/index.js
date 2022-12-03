@@ -51,7 +51,7 @@ function EarlyAccessView(props) {
           alt='arrowBannerIcon'
         />
       </div>
-      <button className={styles.button} onClick={openForm} />
+      <div className={styles.button} onClick={openForm} />
     </div>
   );
 }

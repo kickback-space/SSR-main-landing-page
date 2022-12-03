@@ -38,6 +38,13 @@
       background-image: url('/button/earlyAccess/disable.png');
     }
   }
+  .button::after {
+    display: block;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    content: url('/button/earlyAccess/disable.png');
+  }
   .bottomPanel {
     display: none;
     @include desktop {
