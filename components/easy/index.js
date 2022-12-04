@@ -47,8 +47,8 @@ function Easy() {
     <div id='easyView' className={styles.wrapperView}>
       <div className={styles.contentView}>
         <div className={styles.easyBanner}>
-          <video loop muted autoPlay playsInline>
-            <source src='/video/mainVideo.mp4' type='video/mp4' />
+          <video src='/video/mainVideo.mp4' loop muted autoPlay playsInline>
+            {/* <source src='/video/mainVideo.mp4' type='video/mp4' /> */}
           </video>
         </div>
         <div className={styles.groupView}>
