@@ -47,7 +47,7 @@ function Easy() {
     <div id='easyView' className={styles.wrapperView}>
       <div className={styles.contentView}>
         <div className={styles.easyBanner}>
-          <video autoPlay muted loop>
+          <video control='' autoPlay muted loop>
             <source src='/video/mainVideo.mp4' type='video/mp4' />
           </video>
         </div>
