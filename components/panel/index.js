@@ -14,7 +14,7 @@ function Panel() {
       <div className={styles.contentView}>
         <div className={styles.titleGroup}>
           <div className={styles.videoGroup}>
-            <video autoPlay muted loop>
+            <video autoPlay muted loop playsInline>
               <source src='/video/mainVideo.mp4' type='video/mp4' />
             </video>
           </div>

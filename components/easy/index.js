@@ -47,7 +47,7 @@ function Easy() {
     <div id='easyView' className={styles.wrapperView}>
       <div className={styles.contentView}>
         <div
-          className={styles.contentView}
+          className={styles.easyBanner}
           dangerouslySetInnerHTML={{
             __html: `
         <video
