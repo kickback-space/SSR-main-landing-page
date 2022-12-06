@@ -1,12 +1,15 @@
 @import 'responsive';
 .wrapperView {
   background: linear-gradient(
-    79.37deg,
-    #fde6e8 -11.2%,
-    rgba(255, 245, 247, 0) 70.51%
+    247.53deg,
+    #fef5eb 5.9%,
+    rgba(255, 249, 241, 0) 54.67%
   );
   .contentView {
     padding: 24px 5vw 24px 5vw;
+    @include desktop {
+      padding: 24px 100px 24px 100px;
+    }
     .titleGroup {
       display: flex;
       flex-direction: column;
@@ -39,7 +42,7 @@
           color: #585858;
           letter-spacing: 0.005em;
         }
-        .infoWrraperView {
+        .infoWrapperView {
           @include desktop {
             //flex: calc((50vw - 24px) / 100);
             width: 48%;
@@ -51,24 +54,23 @@
             padding: 16px;
             .infoContent {
               display: flex;
-              grid-gap: 12px;
               justify-content: flex-start;
               .imageContent {
                 position: relative;
-                width: 40%;
+                width: 70px;
+                height: 46px;
+                border-radius: 4px;
+                display: flex;
+                justify-content: center;
                 @include desktop {
                   width: 245px;
                   height: 160px;
+                  border-radius: 12px;
                 }
-                display: flex;
-                justify-content: center;
-                border-radius: 12px;
-                background: #c4c4c4;
-                width: 70px;
-                height: 46px;
               }
               .textContent {
-                width: 60%;
+                margin-left: 12px;
+                flex: 1;
                 @include desktop {
                   justify-content: center;
                 }
@@ -76,6 +78,7 @@
                 flex-direction: column;
                 align-items: flex-start;
                 .textUser {
+                  text-align: left;
                   @include desktop {
                     font-size: 18px;
                   }

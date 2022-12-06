@@ -8,7 +8,7 @@
     rgba(255, 249, 241, 0) 72.61%
   );
   @include desktop {
-    padding: 64px;
+    padding: 100px 100px 100px 100px;
   }
   .contentView {
     width: 100%;
@@ -17,13 +17,13 @@
     align-items: center;
     @include desktop {
       flex-direction: row;
-      grid-gap: 102px;
+      justify-content: space-between;
     }
     .easyBanner {
       background: #ffffff;
       box-shadow: 10px 10px 50px rgba(203, 203, 203, 0.25);
       border-radius: 16px;
-      padding: 24px;
+      padding: 16px;
       @include desktop {
         height: fit-content;
       }
@@ -70,7 +70,8 @@
         }
       }
       .signUpButton {
-        margin-top: 40px;
+        margin: auto;
+        margin-top: 32px;
         width: 243px;
         height: 58px;
         border-radius: 12px;
@@ -82,6 +83,17 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
+        @include desktop {
+          margin: unset;
+          margin-top: 40px;
+          &:hover {
+            background-color: #00ba88;
+          }
+          &:active {
+            background-color: #46bfc7;
+          }
+        }
       }
     }
   }

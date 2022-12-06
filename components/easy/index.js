@@ -3,10 +3,11 @@ import styles from './easy.module.scss';
 import number1 from '../../public/icon/number-1.svg';
 import number2 from '../../public/icon/number-2.svg';
 import number3 from '../../public/icon/number-3.svg';
+import { usePlausible } from 'next-plausible';
 
 const data = [
   {
-    text: `Create & brand your space`,
+    text: `Select an environment`,
     icon: number1,
   },
   {
@@ -35,11 +36,18 @@ function GroupItemView(props) {
 }
 
 function Easy() {
+  const plausible = usePlausible();
+  function handleClickOpenForm() {
+    window.open(
+      'https://xtm50lcgfwe.typeform.com/to/cTz6CDkh?typeform-source=landing_page_desktop'
+    );
+    plausible('SignUp');
+  }
   return (
     <div id='easyView' className={styles.wrapperView}>
       <div className={styles.contentView}>
         <div className={styles.easyBanner}>
-          <video autoPlay muted loop>
+          <video autoPlay muted loop playsInline>
             <source src='/video/mainVideo.mp4' type='video/mp4' />
           </video>
         </div>
@@ -55,7 +63,10 @@ function Easy() {
               icon={item.icon}
             />
           ))}
-          <div className={styles.signUpButton}>{`Get early access now`}</div>
+          <div
+            onClick={handleClickOpenForm}
+            className={styles.signUpButton}
+          >{`Get early access now`}</div>
         </div>
       </div>
     </div>

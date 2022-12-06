@@ -4,6 +4,13 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: unset;
 }
+body::after {
+  display: block;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  content: url('/button/earlyAccess/hover.png');
+}
 main {
   display: flex;
   flex-direction: column;
@@ -22,7 +29,7 @@ button {
   border: unset;
   &:hover {
     background-color: $v-bg-00BA88;
-  }  
+  }
   &:active {
     background-color: $v-bg-46BFC7;
   }

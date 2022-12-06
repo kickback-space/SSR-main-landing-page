@@ -8,8 +8,10 @@
   background-color: rgba(255, 255, 255, 0.2);
   justify-content: space-between;
   z-index: 1000;
+  height: unset;
   @include desktop {
-    padding: 12px 50px 12px 100px;
+    padding: 0px 49px 0px 49px;
+    height: 72px;
   }
   .headerLogo {
     display: flex;
@@ -42,6 +44,9 @@
         font-size: 18px;
         line-height: 190%;
         color: #258099;
+        &:hover {
+          color: #46bfc7;
+        }
       }
       .actionButton {
         width: 182px;

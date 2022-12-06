@@ -4,26 +4,12 @@ import Insta from '../../public/icon/insta.svg';
 import Email from '../../public/icon/email.svg';
 import LogoNoColor from '../../public/icon/logoNoColor.svg';
 
-const contactData = [
-  {
-    info: 'kickback.space',
-    icon: 'kickback.space',
-  },
-  {
-    info: 'support@kickback.space',
-    icon: 'support@kickback.space',
-  },
-];
-
-function ContactItem(props) {
-  return <div></div>;
-}
 function getStart() {
   let easyView = document.getElementById('easyView');
   easyView.scrollIntoView({ behavior: 'smooth' }, true);
 }
 function faqAction() {
-  let faqView = document.getElementById('questionView');
+  let faqView = document.getElementById('faqView');
   faqView.scrollIntoView({ behavior: 'smooth' }, true);
 }
 
@@ -43,27 +29,43 @@ function Footer() {
                 <span className='cursor' onClick={faqAction}>{`FAQ`}</span>
               </div>
               <div className={styles.rightFooter}>
-                <div className={styles.kickBackSpace}>
-                  <Image src={Insta} alt='instaIcon' />
-                  <p>{`kickback.space`}</p>
+                <div className={styles.rightContent}>
+                  <div className={styles.wrapperImage}>
+                    <Image
+                      layout='fill'
+                      objectFit='contain'
+                      src={Insta}
+                      alt='instaIcon'
+                    />
+                  </div>
+                  <span>{`kickback.space`}</span>
                 </div>
-                <div className={styles.kickBackSupport}>
-                  <Image src={Email} alt='emailIcon' />
-                  <p>{`support@kickback.space`}</p>
+                <div className={styles.rightContent}>
+                  <div className={styles.wrapperImage}>
+                    <Image
+                      layout='fill'
+                      objectFit='contain'
+                      src={Email}
+                      alt='emailIcon'
+                    />
+                  </div>
+                  <span>{`support@kickback.space`}</span>
                 </div>
               </div>
             </div>
-
-            <div>
-              {contactData.map((item, index) => (
-                <ContactItem key={index} data={item} />
-              ))}
-            </div>
           </div>
         </div>
+        <div className={styles.line} />
         <div className={styles.logoGroup}>
-          <Image src={LogoNoColor} alt='logo' />
-          <span>{`Copyright reserved by Kickback Space Inc, 2021`}</span>
+          <div className={styles.wrapperImage}>
+            <Image
+              layout='fill'
+              objectFit='contain'
+              src={LogoNoColor}
+              alt='logo'
+            />
+          </div>
+          <span>{`Copyright reserved by Kickback Space Inc, 2023`}</span>
         </div>
       </div>
     </div>

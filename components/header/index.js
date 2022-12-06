@@ -2,21 +2,24 @@ import { useState, memo, useEffect } from 'react';
 import Image from 'next/image';
 import styles from './header.module.scss';
 import Sidebar from '../sidebar';
+import { usePlausible } from 'next-plausible';
 
 function Header() {
   const [sidebarOpen, setSideBarOpen] = useState(false);
+  const plausible = usePlausible();
   function getStart() {
     let easyView = document.getElementById('easyView');
     easyView.scrollIntoView({ behavior: 'smooth' }, true);
   }
 
   function FAQ() {
-    let faqView = document.getElementById('questionView');
+    let faqView = document.getElementById('faqView');
     faqView.scrollIntoView({ behavior: 'smooth' }, true);
   }
 
   function action() {
     window.open('https://calendly.com/rocco-haro/15min', '_blank');
+    plausible('SeeItInAction');
   }
 
   function handleViewSidebar() {

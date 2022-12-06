@@ -1,24 +1,28 @@
 import styles from './team.module.scss';
 import Image from 'next/image';
-import Phat from '../../public/avatar/engineer/Phat.svg';
-import Alvin from '../../public/avatar/engineer/Alvin.svg';
-import Bogdan from '../../public/avatar/engineer/Bogdan.svg';
-import Kevin from '../../public/avatar/engineer/Kevin.svg';
-import Owais from '../../public/avatar/engineer/Owais.svg';
-import Trinh from '../../public/avatar/engineer/Trinh.svg';
-import Yannis from '../../public/avatar/engineer/Yannis.svg';
-import Erfan from '../../public/avatar/machine-learning/Erfan.svg';
-import Pankhuri from '../../public/avatar/design/Pankhuri.svg';
-import Erik from '../../public/avatar/design/Erik.svg';
-import Winson from '../../public/avatar/user-experience/Winson.svg';
-import Bankston from '../../public/avatar/advisor/Bankston.svg';
-import Heather from '../../public/avatar/advisor/Heather.svg';
-import Dan from '../../public/avatar/advisor/Dan.svg';
-import Yossi from '../../public/avatar/advisor/Yossi.svg';
-import Todd from '../../public/avatar/advisor/Todd.svg';
-import Rocco from '../../public/avatar/founder/rocco.svg';
-import Muthu from '../../public/avatar/engineer/Muthu.svg';
 import Accordion from '../according';
+// Engineer team
+import Muthu from '../../public/team/engineerMuthu.png';
+import Alvin from '../../public/team/engineerAlvin.png';
+import Ruth from '../../public/team/engineerRuth.png';
+import Phat from '../../public/team/engineerPhat.png';
+import Trinh from '../../public/team/engineerTrinh.png';
+import Bogdan from '../../public/team/engineerBogdan.png';
+
+// Designer an User Experience team
+import Erik from '../../public/team/designerErik.png';
+import Winson from '../../public/team/designerWinson.png';
+
+// advisor team
+import Bankston from '../../public/team/advisorBankston.png';
+import Dan from '../../public/team/advisorDan.png';
+import Heather from '../../public/team/advisorHeather.png';
+import Todd from '../../public/team/advisorTodd.png';
+import Yossi from '../../public/team/advisorYossi.png';
+
+// founder team
+import Rocco from '../../public/team/founderRocco.png';
+import { useState } from 'react';
 
 const engineerPeopleData = [
   {
@@ -40,9 +44,9 @@ const engineerPeopleData = [
     published: false,
   },
   {
-    avatar: Owais,
-    name: 'Owais Nasir',
-    position: 'Software Engineer',
+    avatar: Ruth,
+    name: 'Ruth Lopez',
+    position: 'Software Enginer',
     published: false,
   },
   {
@@ -57,18 +61,6 @@ const engineerPeopleData = [
     position: 'Frontend Engineer',
     published: false,
   },
-  {
-    avatar: Kevin,
-    name: 'Kelvin Yankey',
-    position: 'Software Engineer',
-    published: false,
-  },
-  {
-    avatar: Yannis,
-    name: 'Yannis Mekaouche',
-    position: 'Infrastructure Engineer',
-    published: false,
-  },
 ];
 const userExperienceAndDesignPeopleData = [
   {
@@ -81,12 +73,6 @@ const userExperienceAndDesignPeopleData = [
     avatar: Winson,
     name: 'Winson Teo',
     position: 'Architect & CGI Artist',
-    published: false,
-  },
-  {
-    avatar: Pankhuri,
-    name: 'Pankhuri Badal',
-    position: 'Designer',
     published: false,
   },
 ];
@@ -127,25 +113,20 @@ const founder = [
   {
     avatar: Rocco,
     name: 'Rocco Haro',
-    position: 'Principal',
+    position: 'CEO',
     published: true,
-  },
-  {
-    avatar: Erfan,
-    name: 'Erfan Eshratifar',
-    position: 'Chief ML Scientists',
-    published: false,
   },
 ];
 
 function PeopleInformation(props) {
   return (
-    <div className={styles.infoWrraperView}>
+    <div className={styles.infoWrapperView}>
       <div className={styles.infoWrapper}>
         <div className={styles.infoContent}>
           <div className={styles.imageContent}>
             <Image
               layout='fill'
+              objectFit='fill'
               src={props.data.avatar}
               alt={props.data.name}
             />
@@ -164,13 +145,34 @@ function PeopleInformation(props) {
 }
 
 function Team() {
+  const [indexActive, setIndexActive] = useState(null);
+  function updateStateAccordion(indexAccordion) {
+    let result = indexActive === indexAccordion ? null : indexAccordion;
+    setIndexActive(result);
+    let teamView = document.getElementById('teamTitle');
+    let positionView = teamView.getBoundingClientRect();
+    if (positionView.y < -20) {
+      teamView.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  }
   return (
-    <div id='meetView' className={styles.wrapperView}>
+    <div id='teamView' className={styles.wrapperView}>
       <div className={styles.contentView}>
         <div className={styles.titleGroup}>
-          <span className={styles.title}>{'Meet the Team'}</span>
+          <span className={styles.title} id='teamTitle'>
+            {'Meet the Team'}
+          </span>
           <div className={styles.questionItem}>
-            <Accordion title={`Engineers (${engineerPeopleData.length})`}>
+            <Accordion
+              title={`Engineers (${engineerPeopleData.length})`}
+              toggleAccordion={updateStateAccordion}
+              active={indexActive === 1}
+              indexAccordion={1}
+              id='engineersTeam'
+            >
               <div className={styles.content}>
                 {engineerPeopleData.map((item, index) => (
                   <PeopleInformation key={index} data={item} position='left' />
@@ -181,6 +183,10 @@ function Team() {
           <div className={styles.questionItem}>
             <Accordion
               title={`User Experience & Designers (${userExperienceAndDesignPeopleData.length})`}
+              toggleAccordion={updateStateAccordion}
+              active={indexActive === 2}
+              indexAccordion={2}
+              id='usersTeam'
             >
               <div className={styles.content}>
                 {userExperienceAndDesignPeopleData.map((item, index) => (
@@ -190,7 +196,13 @@ function Team() {
             </Accordion>
           </div>
           <div className={styles.questionItem}>
-            <Accordion title={`Advisor (${advisorPeopleData.length})`}>
+            <Accordion
+              title={`Advisors (${advisorPeopleData.length})`}
+              toggleAccordion={updateStateAccordion}
+              active={indexActive === 3}
+              indexAccordion={3}
+              id='advisorsTeam'
+            >
               <div className={styles.content}>
                 {advisorPeopleData.map((item, index) => (
                   <PeopleInformation key={index} data={item} />
@@ -199,7 +211,13 @@ function Team() {
             </Accordion>
           </div>
           <div className={styles.questionItem}>
-            <Accordion title={`Founder (${founder.length})`}>
+            <Accordion
+              title={`Founders (${founder.length})`}
+              toggleAccordion={updateStateAccordion}
+              active={indexActive === 4}
+              indexAccordion={4}
+              id='foundsTeam'
+            >
               <div className={styles.content}>
                 {founder.map((item, index) => (
                   <PeopleInformation key={index} data={item} />

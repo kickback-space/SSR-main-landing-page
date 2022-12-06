@@ -1,50 +1,40 @@
 import Image from 'next/image';
 import styles from './panel.module.scss';
 import * as React from 'react';
+import { usePlausible } from 'next-plausible';
 
 function Panel() {
-  function handleTransitionNextView() {
-    let nextView = document.getElementById('informationView');
-    nextView.scrollIntoView({ behavior: 'smooth' }, true);
-  }
+  const plausible = usePlausible();
   function actionClick() {
     window.open('https://calendly.com/rocco-haro/15min', '_blank');
+    plausible('SeeItInAction');
   }
   return (
     <div id='panelView' className={styles.wrapperView}>
       <div className={styles.contentView}>
         <div className={styles.titleGroup}>
           <div className={styles.videoGroup}>
-            <video autoPlay muted loop>
+            <video autoPlay muted loop playsInline>
               <source src='/video/mainVideo.mp4' type='video/mp4' />
             </video>
           </div>
           <div className={styles.infoGroup}>
-            <span>{`kick back and foster conversations as if you’re actually together`}</span>
+            <span>{`kick back and come together in a more human way`}</span>
             <div className={styles.buttonContainer}>
               <button onClick={actionClick}>{`See it in action`}</button>
             </div>
           </div>
         </div>
-        <div className={`${styles.bottomPanel} v-mt-27 cursor`}>
-          <Image
-            onClick={handleTransitionNextView}
-            width={64}
-            height={64}
-            src={'/icon/arrowBannerIcon.svg'}
-            alt='arrowBannerIcon'
-          />
-        </div>
       </div>
       <div className={styles.layoutImage}>
-        <div>
-          <Image
-            layout='fill'
-            src={'/banner/backgroundImageBanner.png'}
-            alt='backgroundImageBanner'
-            priority
-          />
-        </div>
+        <Image
+          layout='responsive'
+          src={'/banner/backgroundImageBanner.png'}
+          alt='backgroundImageBanner'
+          width={1080}
+          height={800}
+          priority
+        />
       </div>
     </div>
   );

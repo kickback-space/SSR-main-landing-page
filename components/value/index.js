@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import styles from './value.module.scss';
-import noEyeContact from '../../public/banner/noEyeContactBanner.svg';
-import eyeContact from '../../public/banner/eyeContactBanner.svg';
+import valueBanner from '../../public/banner/valueBanner.png';
 
 function Value() {
   return (
@@ -9,24 +8,12 @@ function Value() {
       <div className={styles.contentView}>
         <span
           className={styles.title}
-        >{`Looking at the camera is now a thing of the past with our automatic eye gaze adjustment*`}</span>
+        >{`Hear people as you would in real life and control your conversations`}</span>
+        <span
+          className={styles.info}
+        >{`Those who are closer sound louder than those who are distant, letting you move in and out of conversations gracefully`}</span>
         <div className={styles.groupEyeView}>
-          <div className={styles.noEyeContact}>
-            <span
-              className={styles.titleGroupNoEyeContact}
-            >{`No eye contact`}</span>
-            <Image src={noEyeContact} alt={'noEyeContactBanner'} />
-          </div>
-          <div className={styles.eyeContact}>
-            <span
-              className={styles.titleGroupEyeContact}
-            >{`Eye contact enabled`}</span>
-            <Image src={eyeContact} alt='eyeContactBanner' />
-          </div>
-        </div>
-        <div className={`${styles.bottomContent} 'v-mt-17'`}>
-          <span>{`As we approach Angela & Chris we are able to recognize they are actively engaged  in conversation`}</span>
-          <span>{`* Coming Soon`}</span>
+          <Image layout='fill' src={valueBanner} alt='eyeContactBanner' />
         </div>
       </div>
     </div>

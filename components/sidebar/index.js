@@ -2,10 +2,12 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './sidebar.module.scss';
 import closeSidebarIcon from '../../public/icon/closeSidebarIcon.svg';
+import { usePlausible } from 'next-plausible';
 
 function Sidebar(props) {
   const { isOpen, toggleSidebar } = props;
   const sidebarClass = isOpen ? styles.sidebarOpen : styles.sidebarClose;
+  const plausible = usePlausible();
 
   function getStart() {
     toggleSidebar();
@@ -18,14 +20,14 @@ function Sidebar(props) {
   function FAQ() {
     toggleSidebar();
     setTimeout(() => {
-      faqView.scrollIntoView({ behavior: 'smooth' }, true);
-      let faqView = document.getElementById('questionView');
+      let faqView = document.getElementById('faqView');
       faqView.scrollIntoView({ behavior: 'smooth' }, true);
     }, 200);
   }
 
   function action() {
     window.open('https://calendly.com/rocco-haro/15min', '_blank');
+    plausible('SeeItInAction');
   }
 
   return (
