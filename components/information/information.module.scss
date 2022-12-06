@@ -1,0 +1,117 @@
+@import 'responsive';
+
+.wrapperView {
+  margin-top: 24px;
+  @include desktop {
+    margin-top: unset;
+  }
+  text-align: center;
+  .contentView {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .firstContentWrapper {
+      @include desktop {
+        width: 100%;
+        background: linear-gradient(
+          64.75deg,
+          #9fffe5 -5.33%,
+          rgba(226, 255, 247, 0) 57.2%
+        );
+      }
+      display: flex;
+      flex-direction: column;
+    }
+    .title {
+      margin-top: 48px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 190%;
+      color: #254261;
+      @include desktop {
+        margin-top: 100px;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 175%;
+      }
+    }
+    .videoBanner {
+      margin: auto;
+      margin-top: 24px;
+      @include desktop {
+        margin: auto;
+        margin-top: 56px;
+        margin-bottom: 100px;
+      }
+    }
+    .groupView {
+      @include desktop {
+        width: calc(100% - 200px);
+        margin: 48px 0px 48px 0px;
+      }
+      margin: 48px 16px 48px 16px;
+      background: linear-gradient(180deg, #dbfcff 0%, #f3feff 100%);
+      box-shadow: 10px 20px 20px rgba(236, 236, 236, 0.29);
+      border-radius: 24px;
+      .groupViewInfo {
+        padding: 40px;
+        @include desktop {
+          padding: 56px;
+          flex-direction: row;
+          justify-content: space-between;
+          .infoMobile {
+            display: none;
+          }
+          .infoDesktop {
+            font-size: 32px;
+            margin-top: 8px;
+            font-weight: bold;
+            line-height: 175%;
+            color: #f0a03f;
+          }
+        }
+        @include mobile {
+          .infoDesktop {
+            display: none;
+          }
+        }
+        display: flex;
+        flex-direction: column;
+        .textInfo {
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+          justify-content: center;
+          @include mobile {
+            text-align: center;
+          }
+        }
+        .titleInfo {
+          @include desktop {
+            font-size: 24px;
+            line-height: 184%;
+          }
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 190%;
+          color: #254261;
+        }
+        .infoMobile {
+          margin-top: 32px;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 190%;
+          color: #f0a03f;
+        }
+      }
+      .groupViewBanner {
+        position: relative;
+        width: 100%;
+        @include mobile {
+          margin-top: 32px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import 'responsive';
+.wrapperView {
+  .contentView {
+    margin: 118px 5vw 5vw 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include desktop {
+      margin: 118px 100px 5vw 100px;
+    }
+    .title {
+      @include desktop {
+        font-size: 32px;
+      }
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 175%;
+      color: #254261;
+    }
+    .info {
+      margin-top: 16px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 194%;
+      letter-spacing: 0.005em;
+      color: #254261;
+      position: relative;
+      text-align: center;
+    }
+    .groupEyeView {
+      position: relative;
+      @include desktop {
+        margin-top: 64px;
+        width: 1019px;
+        height: 492px;
+      }
+      margin-top: 32px;
+      width: 80%;
+      height: 50vw;
+    }
+  }
+}

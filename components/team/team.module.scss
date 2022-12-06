@@ -1,0 +1,126 @@
+@import 'responsive';
+.wrapperView {
+  background: linear-gradient(
+    247.53deg,
+    #fef5eb 5.9%,
+    rgba(255, 249, 241, 0) 54.67%
+  );
+  .contentView {
+    padding: 24px 5vw 24px 5vw;
+    @include desktop {
+      padding: 24px 100px 24px 100px;
+    }
+    .titleGroup {
+      display: flex;
+      flex-direction: column;
+      margin-top: calc(241px - 128px);
+      .title {
+        @include desktop {
+          font-size: 32px;
+        }
+        margin-bottom: 32px;
+      }
+      .questionItem {
+        margin-bottom: 32px;
+      }
+      .content {
+        transition: max-height 0.2s ease-out;
+        background-color: white;
+        border-radius: 12px;
+        @include desktop {
+          display: flex;
+          flex-wrap: wrap;
+          column-gap: 24px;
+        }
+        .divine {
+          border: 1px solid #b8b8b8;
+        }
+        span {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 212%;
+          color: #585858;
+          letter-spacing: 0.005em;
+        }
+        .infoWrapperView {
+          @include desktop {
+            //flex: calc((50vw - 24px) / 100);
+            width: 48%;
+          }
+          margin-bottom: 16px;
+          .infoWrapper {
+            border: 1px solid #e3e3e3;
+            border-radius: 12px;
+            padding: 16px;
+            .infoContent {
+              display: flex;
+              justify-content: flex-start;
+              .imageContent {
+                position: relative;
+                width: 70px;
+                height: 46px;
+                border-radius: 4px;
+                display: flex;
+                justify-content: center;
+                @include desktop {
+                  width: 245px;
+                  height: 160px;
+                  border-radius: 12px;
+                }
+              }
+              .textContent {
+                margin-left: 12px;
+                flex: 1;
+                @include desktop {
+                  justify-content: center;
+                }
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                .textUser {
+                  text-align: left;
+                  @include desktop {
+                    font-size: 18px;
+                  }
+                  font-family: 'Poppins';
+                  font-style: normal;
+                  font-weight: 600;
+                  font-size: 14px;
+                  line-height: 214%;
+                  color: #254261;
+                }
+                .textPosition {
+                  @include desktop {
+                    font-size: 18px;
+                  }
+                  text-align: left;
+                  font-weight: 400;
+                  font-size: 12px;
+                  line-height: 200%;
+                  letter-spacing: 0.005em;
+                  color: #8e8e8e;
+                  white-space: break-spaces;
+                }
+                .textPublished {
+                  font-weight: 400;
+                  font-size: 16px;
+                  line-height: 34px;
+                  letter-spacing: 0.005em;
+                  text-decoration-line: underline;
+                  color: #f0a03f;
+                }
+              }
+            }
+          }
+        }
+      }
+      span {
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 175%;
+        color: #254261;
+      }
+    }
+  }
+}

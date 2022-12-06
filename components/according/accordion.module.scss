@@ -1,0 +1,49 @@
+@import 'responsive';
+.accordionWrapper {
+  .accordion {
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+    padding: 18px;
+    border: 1px solid #e3e3e3;
+    border-radius: 12px;
+    .item {
+      .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .titleQuestionStyle {
+          @include desktop {
+            font-size: 18px;
+          }
+          text-align: left;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 175%;
+          color: #254261;
+        }
+        .titleStyle {
+          @include desktop {
+            font-size: 24px;
+            line-height: 46px;
+          }
+          text-align: left;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 175%;
+          color: #254261;
+        }
+      }
+      .content {
+        padding: 0 18px;
+        transition: max-height 0.2s ease-out;
+        background-color: white;
+        border-radius: 12px;
+        border: 1px solid #b8b8b8;
+      }
+    }
+    .children {
+      cursor: unset;
+    }
+  }
+}

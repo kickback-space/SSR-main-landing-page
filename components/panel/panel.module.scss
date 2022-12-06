@@ -1,0 +1,114 @@
+@import 'responsive';
+
+.wrapperView {
+  margin-top: 40px;
+  height: unset;
+  @include desktop {
+    margin-top: -72px;
+    height: 800px;
+  }
+  position: relative;
+  .contentView {
+    .titleGroup {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0px 16px;
+      @include desktop {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 196px 100px 0vh 100px;
+      }
+      span {
+        margin-top: 24px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 175%;
+        color: #254261;
+        @include desktop {
+          margin-top: unset;
+          font-size: 32px;
+          text-align: left;
+        }
+      }
+      button {
+        margin-top: 24px;
+        margin-bottom: 24px;
+        width: 182px;
+        height: 58px;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 190%;
+        color: #fff1df;
+      }
+    }
+    .videoGroup {
+      padding: 8px;
+      background: #ffffff;
+      box-shadow: 10px 10px 50px #ececec;
+      border-radius: 16px;
+      @include desktop {
+        padding: 16px;
+      }
+      video {
+        border-radius: 8px;
+        width: 100%;
+        @include desktop {
+          width: 584px;
+        }
+      }
+    }
+    .infoGroup {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      margin-top: 41px;
+      @include desktop {
+        margin-top: unset;
+        margin-right: 25px;
+      }
+      span {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 190%;
+        color: #254261;
+        @include desktop {
+          font-weight: 700;
+          font-size: 32px;
+          line-height: 175%;
+        }
+      }
+      button {
+        margin: unset;
+      }
+      .buttonContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 24px;
+        @include desktop {
+          margin-top: 32px;
+          justify-content: unset;
+        }
+      }
+    }
+  }
+  .layoutImage {
+    top: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    display: block;
+    margin-top: -96px;
+    @include desktop {
+      margin-top: unset;
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+}

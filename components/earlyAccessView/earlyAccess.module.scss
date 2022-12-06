@@ -1,0 +1,57 @@
+@import 'responsive';
+
+.wrapperView {
+  position: fixed;
+  right: 50px;
+  bottom: 90px;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  left: 50px;
+  width: calc(100vw - 100px);
+  @include mobile {
+    display: unset;
+    justify-content: unset;
+    left: unset;
+    width: unset;
+  }
+
+  @include smallMobile {
+    right: 16px;
+    bottom: 16px;
+  }
+  .button {
+    width: 166px;
+    height: 64px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-image: url('/button/earlyAccess/default.png');
+    background-size: 100% 100%;
+    border: unset;
+    &:hover {
+      background-image: url('/button/earlyAccess/hover.png');
+    }
+    &:active {
+      background-image: url('/button/earlyAccess/disable.png');
+    }
+  }
+  .button::after {
+    display: block;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    content: url('/button/earlyAccess/disable.png');
+  }
+  .bottomPanel {
+    display: none;
+    @include desktop {
+      display: flex;
+      width: 50px;
+      height: 50px;
+      position: relative;
+    }
+  }
+}
