@@ -46,4 +46,17 @@
       cursor: unset;
     }
   }
+  .icon {
+    display: none;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    @include desktop {
+      width: 48px;
+      height: 48px;
+    }
+  }
+  .isDisplay {
+    display: block;
+  }
 }

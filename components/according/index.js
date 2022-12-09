@@ -24,16 +24,40 @@ function Accordion(props) {
               {title}
             </div>
             <div>
-              {active ? (
-                type ? (
-                  <Image src={iconExpanded} />
-                ) : (
-                  <Image src={iconDropUp} />
-                )
-              ) : type ? (
-                <Image src={iconExpand} />
+              {type ? (
+                <>
+                  <div
+                    className={`${styles.icon} ${active && styles.isDisplay} `}
+                  >
+                    <Image
+                      layout='fill'
+                      objectFit='contain'
+                      src={iconExpanded}
+                    />
+                  </div>
+                  <div
+                    className={`${styles.icon} ${!active && styles.isDisplay} `}
+                  >
+                    <Image layout='fill' objectFit='contain' src={iconExpand} />
+                  </div>
+                </>
               ) : (
-                <Image src={iconDropdown} />
+                <>
+                  <div
+                    className={`${styles.icon} ${active && styles.isDisplay} `}
+                  >
+                    <Image layout='fill' objectFit='contain' src={iconDropUp} />
+                  </div>
+                  <div
+                    className={`${styles.icon} ${!active && styles.isDisplay} `}
+                  >
+                    <Image
+                      layout='fill'
+                      objectFit='contain'
+                      src={iconDropdown}
+                    />
+                  </div>
+                </>
               )}
             </div>
           </div>
