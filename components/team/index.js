@@ -212,7 +212,7 @@ function Team() {
           </div>
           <div className={styles.questionItem}>
             <Accordion
-              title={`Founders (${founder.length})`}
+              title={`Founder (${founder.length})`}
               toggleAccordion={updateStateAccordion}
               active={indexActive === 4}
               indexAccordion={4}
