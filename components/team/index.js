@@ -28,25 +28,25 @@ const engineerPeopleData = [
   {
     avatar: Phat,
     name: 'Phat Trinh Chan',
-    position: 'Software Engineer',
+    position: 'Sr. Software Engineer',
     published: false,
   },
   {
     avatar: Bogdan,
     name: 'Bogdan Marin',
-    position: 'Cloud Engineer',
+    position: 'Sr. Cloud Engineer',
     published: false,
   },
   {
     avatar: Alvin,
     name: 'Alvin Shaita',
-    position: 'Software Enginer',
+    position: 'Software Engineer',
     published: false,
   },
   {
     avatar: Ruth,
     name: 'Ruth Lopez',
-    position: 'Software Enginer',
+    position: 'Sr. Game Engineer',
     published: false,
   },
   {
