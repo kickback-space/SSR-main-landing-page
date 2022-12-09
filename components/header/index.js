@@ -56,16 +56,16 @@ function Header() {
     <div id='headerView' className={styles.headerWrapperView}>
       <div className={styles.headerLogo}>
         <Image
-          width={127}
-          height={32}
+          layout='fill'
+          objectFit='contain'
           src={'/icon/headerIcon.svg'}
           alt='iconHeader'
         />
       </div>
       <div className={styles.headerLogoBrowser}>
         <Image
-          width={200}
-          height={48}
+          layout='fill'
+          objectFit='contain'
           src={'/icon/headerIconBrowser.svg'}
           alt='iconHeader'
         />
@@ -75,8 +75,8 @@ function Header() {
         className={`cursor ${styles.headerMenuIcon}`}
       >
         <Image
-          width={32}
-          height={32}
+          layout='fill'
+          objectFit='contain'
           src={'/icon/menuIcon.svg'}
           alt='menuIcon'
         />
