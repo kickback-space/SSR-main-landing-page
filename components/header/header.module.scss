@@ -14,7 +14,10 @@
     height: 72px;
   }
   .headerLogo {
-    display: flex;
+    display: block;
+    width: 127px;
+    height: 32px;
+    position: relative;
     @include desktop {
       display: none;
     }
@@ -23,11 +26,17 @@
     display: none;
     @include desktop {
       display: flex;
+      display: block;
+      position: relative;
+      width: 200px;
+      height: 48px;
     }
   }
   .headerMenuIcon {
-    display: flex;
-    justify-content: center;
+    display: block;
+    width: 32px;
+    height: 32px;
+    position: relative;
     @include desktop {
       display: none;
       padding: unset;
