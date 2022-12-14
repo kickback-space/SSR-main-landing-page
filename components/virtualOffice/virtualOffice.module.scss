@@ -13,6 +13,8 @@
     @include desktop {
       align-items: center;
       flex-direction: row-reverse;
+      max-width: 1342px;
+      margin: auto;
     }
     width: 100%;
     display: flex;
