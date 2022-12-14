@@ -18,6 +18,8 @@
     @include desktop {
       flex-direction: row;
       justify-content: space-between;
+      max-width: 1342px;
+      margin: auto;
     }
     .easyBanner {
       background: #ffffff;

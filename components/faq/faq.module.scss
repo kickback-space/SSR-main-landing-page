@@ -6,6 +6,8 @@
     padding: 24px 5vw 24px 5vw;
     @include desktop {
       padding: 24px 100px 24px 100px;
+      max-width: 1342px;
+      margin: auto;
     }
     .titleGroup {
       display: flex;

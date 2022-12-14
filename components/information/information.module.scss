@@ -49,6 +49,7 @@
       @include desktop {
         width: calc(100% - 200px);
         margin: 48px 0px 48px 0px;
+        max-width: 1342px;
       }
       margin: 48px 16px 48px 16px;
       background: linear-gradient(180deg, #dbfcff 0%, #f3feff 100%);
