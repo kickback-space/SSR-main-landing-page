@@ -12,7 +12,7 @@ function faqAction() {
   let faqView = document.getElementById('faqView');
   faqView.scrollIntoView({ behavior: 'smooth' }, true);
 }
-
+const currentYear = new Date().getFullYear();
 function Footer() {
   return (
     <div id='footerView'>
@@ -65,7 +65,7 @@ function Footer() {
               alt='logo'
             />
           </div>
-          <span>{`Copyright reserved by Kickback Space Inc, 2023`}</span>
+          <span>{`Copyright reserved by Kickback Space Inc, ${currentYear}`}</span>
         </div>
       </div>
     </div>
