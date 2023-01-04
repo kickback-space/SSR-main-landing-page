@@ -1,6 +1,7 @@
 @import 'responsive';
 .wrapperView {
   @include desktop {
+    margin-top: 100px;
     padding: 64px 100px 64px 100px;
     background: linear-gradient(
       65deg,

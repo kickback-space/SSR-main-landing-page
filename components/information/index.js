@@ -18,30 +18,6 @@ function Information() {
             />
           </div>
         </div>
-        <div className={styles.groupView}>
-          <div className={styles.groupViewInfo}>
-            <div className={styles.textInfo}>
-              <span
-                className={styles.titleInfo}
-              >{`What we need is a more natural conferencing solution`}</span>
-              <span
-                className={styles.infoDesktop}
-              >{`So everyone can become a non-disruptive active participant`}</span>
-            </div>
-
-            <div className={styles.groupViewBanner}>
-              <Image
-                width={530}
-                height={530}
-                src={'/banner/groupBannerFirstInformation.png'}
-                alt={`groupBannerFirstInformation`}
-              />
-            </div>
-            <span
-              className={styles.infoMobile}
-            >{`So we can kick back and feel connected again`}</span>
-          </div>
-        </div>
       </div>
     </div>
   );

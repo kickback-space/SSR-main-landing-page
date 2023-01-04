@@ -9,6 +9,8 @@ import FAQ from '../components/faq';
 import Footer from '../components/footer';
 import Team from '../components/team';
 import GetEarlyAccessView from '../components/earlyAccessView';
+import TraditionView from '../components/traditionView';
+import SolutionView from '../components/solutionView';
 
 export default function Home() {
   return (
@@ -29,6 +31,8 @@ export default function Home() {
         <Header />
         <Panel />
         <Information />
+        <TraditionView />
+        <SolutionView />
         <VirtualOffice />
         <Easy />
         <Value />
