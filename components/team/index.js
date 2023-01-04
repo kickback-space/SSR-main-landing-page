@@ -8,6 +8,7 @@ import Ruth from '../../public/team/engineerRuth.png';
 import Phat from '../../public/team/engineerPhat.png';
 import Trinh from '../../public/team/engineerTrinh.png';
 import Bogdan from '../../public/team/engineerBogdan.png';
+import Miguel from '../../public/team/engineerMiguel.png';
 
 // Designer an User Experience team
 import Erik from '../../public/team/designerErik.png';
@@ -44,9 +45,9 @@ const engineerPeopleData = [
     published: false,
   },
   {
-    avatar: Ruth,
-    name: 'Ruth Lopez',
-    position: 'Sr. Game Engineer',
+    avatar: Miguel,
+    name: 'Miguel Martin',
+    position: 'Performance Engineer',
     published: false,
   },
   {
@@ -54,6 +55,12 @@ const engineerPeopleData = [
     name: 'Dr.Muthu Ramalingam',
     position: 'Applied Machine Learning Engineer',
     published: true,
+  },
+  {
+    avatar: Ruth,
+    name: 'Ruth Lopez',
+    position: 'Sr. Game Engineer',
+    published: false,
   },
   {
     avatar: Trinh,
