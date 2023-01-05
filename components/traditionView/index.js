@@ -20,7 +20,7 @@ function TraditionView() {
           <ul className={styles.wrapperDetail}>
             <li
               className={styles.detail}
-            >{`Only one people can speak at time`}</li>
+            >{`Only one person can speak at time`}</li>
             <li
               className={styles.detail}
             >{`No sense of non-verbal communication`}</li>
