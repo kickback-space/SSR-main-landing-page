@@ -22,15 +22,15 @@
       }
       .headerLeft {
         padding-bottom: 16px;
-        border-bottom: 1px dashed #46BFC7;
+        border-bottom: 1px dashed #46bfc7;
         text-align: center;
         @include desktop {
           flex: 1;
           padding: 19px 35px 23px 35px;
           display: flex;
           justify-content: center;
-          border-right: 1px dashed #46BFC7;
-          border-bottom: 1px dashed #46BFC7;
+          border-right: 1px dashed #46bfc7;
+          border-bottom: 1px dashed #46bfc7;
         }
         span {
           font-weight: 700;
@@ -53,13 +53,13 @@
           padding: 19px 35px 23px 35px;
           display: flex;
           justify-content: center;
-          border-top: 1px dashed #46BFC7;
+          border-top: 1px dashed #46bfc7;
         }
         span {
           font-weight: 700;
           font-size: 24px;
           line-height: 184%;
-          color: #15A9B2;
+          color: #15a9b2;
           @include desktop {
             font-weight: 700;
             font-size: 26px;
@@ -92,9 +92,11 @@
         }
         .wrapperTitleView {
           margin-top: 32px;
+          padding: 0px 8px;
           @include desktop {
             margin-top: 35px;
             height: 101px;
+            padding: 0px 16px;
           }
           ul {
             display: flex;
@@ -105,6 +107,7 @@
             margin-inline-start: 0px;
             margin-inline-end: 0px;
             padding-inline-start: 0px;
+            list-style-position: inside;
             @include desktop {
               align-items: unset;
             }
@@ -122,14 +125,14 @@
         }
         .wrapperDetailView {
           margin-top: 40px;
-          border: 1px solid #46BFC7;
+          border: 1px solid #46bfc7;
           padding: 16px;
           display: flex;
           align-items: center;
           @include desktop {
             margin-top: 24px;
             padding: 24px;
-            max-width: 373px;;
+            max-width: 373px;
           }
           .wrapperImageDetail {
             position: relative;
@@ -169,5 +172,5 @@
         }
       }
     }
-  } 
+  }
 }
