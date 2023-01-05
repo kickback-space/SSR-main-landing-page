@@ -116,7 +116,9 @@
               font-size: 16px;
               line-height: 200%;
               color: #254261;
+              text-align: center;
               @include desktop {
+                text-align: unset;
                 font-size: 20px;
                 line-height: 190%;
               }
