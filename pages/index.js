@@ -19,7 +19,7 @@ export default function Home() {
         <title>Kickback space Inc</title>
         <meta
           name='description'
-          content='Introducing the best way to be present online: photo-realistic virtual environments, video & audio enhancement, and bleeding-edge communication features'
+          content="Come together in a more human way. kick back space is designed to let unstructured meetings feel like we're actually together"
         />
         <link rel='icon' href='/favicon.ico' />
         <link
