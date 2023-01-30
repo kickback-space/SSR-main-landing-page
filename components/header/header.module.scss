@@ -1,5 +1,8 @@
 @import 'responsive';
 
+.headerView {
+  z-index: 1000;
+}
 .headerWrapperView {
   display: flex;
   justify-content: space-between;

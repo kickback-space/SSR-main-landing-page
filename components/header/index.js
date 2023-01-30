@@ -53,7 +53,7 @@ function Header() {
   });
 
   return (
-    <div id='headerView'>
+    <div id='headerView' className={styles.headerView}>
       <div className={styles.headerWrapperView}>
         <div className={styles.headerLogo}>
           <Image
