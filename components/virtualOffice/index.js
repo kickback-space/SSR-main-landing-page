@@ -3,12 +3,24 @@ import styles from './virtualOffice.module.scss';
 import virtualOfficeBanner from '../../public/banner/virtualOfficeBanner.png';
 import checkedGreenIcon from '../../public/icon/checkedGreenIcon.svg';
 import { usePlausible } from 'next-plausible';
+import axios from 'axios';
 
 function VirtualOffice() {
   const plausible = usePlausible();
   function actionClick() {
-    window.open('https://calendly.com/rocco-haro/15min', '_blank');
     plausible('SeeItInAction');
+    const url = "https://api.kickback.space/api/v1/demo/environment_status?environment_name=open"
+    axios.get(url).then( resp => {
+      const is_up = resp.data.data.is_up
+      if (is_up) {
+        window.open('https://app.kickback.space');
+      } else {
+        window.open('https://calendly.com/rocco-haro/15min', '_blank');
+      }
+    }).catch( (e) => {
+      console.log(e)
+      window.open('https://calendly.com/rocco-haro/15min', '_blank');
+    })
   }
   return (
     <div id='virtualView' className={styles.wrapperView}>

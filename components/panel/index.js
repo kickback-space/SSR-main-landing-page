@@ -2,12 +2,24 @@ import Image from 'next/image';
 import styles from './panel.module.scss';
 import * as React from 'react';
 import { usePlausible } from 'next-plausible';
+import axios from 'axios';
 
 function Panel() {
   const plausible = usePlausible();
   function actionClick() {
-    window.open('https://calendly.com/rocco-haro/15min', '_blank');
     plausible('SeeItInAction');
+    const url = "https://api.kickback.space/api/v1/demo/environment_status?environment_name=open"
+    axios.get(url).then( resp => {
+      const is_up = resp.data.data.is_up
+      if (is_up) {
+        window.open('https://app.kickback.space');
+      } else {
+        window.open('https://calendly.com/rocco-haro/15min', '_blank');
+      }
+    }).catch( (e) => {
+      console.log(e)
+      window.open('https://calendly.com/rocco-haro/15min', '_blank');
+    })
   }
   return (
     <div id='panelView' className={styles.wrapperView}>
