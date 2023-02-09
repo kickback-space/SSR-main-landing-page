@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from './header.module.scss';
 import Sidebar from '../sidebar';
 import { usePlausible } from 'next-plausible';
+import axios from 'axios';
 
 function Header() {
   const [sidebarOpen, setSideBarOpen] = useState(false);
@@ -18,8 +19,19 @@ function Header() {
   }
 
   function action() {
-    window.open('https://calendly.com/rocco-haro/15min', '_blank');
     plausible('SeeItInAction');
+    const url = "https://api.kickback.space/api/v1/demo/environment_status?environment_name=open"
+    axios.get(url).then( resp => {
+      const is_up = resp.data.data.is_up
+      if (is_up) {
+        window.open('https://app.kickback.space');
+      } else {
+        window.open('https://calendly.com/rocco-haro/15min', '_blank');
+      }
+    }).catch( (e) => {
+      console.log(e)
+      window.open('https://calendly.com/rocco-haro/15min', '_blank');
+    })
   }
 
   function handleViewSidebar() {
