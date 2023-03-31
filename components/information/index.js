@@ -8,7 +8,7 @@ function Information() {
         <div className={styles.firstContentWrapper}>
           <span
             className={styles.title}
-          >{`The traditional way doesn't let unstructured meetings flourish`}</span>
+          >{`Traditional methods hinder the potential of fluid, open-dialogue meetings.`}</span>
           <div className={styles.videoBanner}>
             <Image
               src={'/banner/videoBannerFirstInformation.png'}

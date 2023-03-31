@@ -37,7 +37,7 @@ function VirtualOffice() {
         <div className={styles.wrapperLeftView}>
           <span
             className={styles.leftViewTitle}
-          >{`Run an immersive event `}</span>
+          >{`Host with us to`}</span>
           <div className={`v-mt-16 ${styles.leftViewGroup}`}>
             <div className={styles.imageIcon}>
               <Image
@@ -49,10 +49,10 @@ function VirtualOffice() {
             </div>
 
             <span className={styles.leftViewGroupInfo}>
-              {` Become an `}
+              {`Enable fruitful `}
               <span
                 className={styles.leftViewGroupHighlight}
-              >{`inclusive host `}</span>
+              >{` networking `}</span>
             </span>
           </div>
           <div className={`v-mt-16 ${styles.leftViewGroup}`}>
@@ -65,12 +65,8 @@ function VirtualOffice() {
               />
             </div>
             <span className={styles.leftViewGroupInfo}>
-              {`Increase `}
-              <span
-                className={styles.leftViewGroupHighlight}
-              >{`engagement`}</span>
-              {` & `}
-              <span className={styles.leftViewGroupHighlight}>{`ROI`}</span>
+              {`Elevate`}
+              <span className={styles.leftViewGroupHighlight}>{` inclusivity`}</span>
             </span>
           </div>
           <div className={`v-mt-16 ${styles.leftViewGroup}`}>
@@ -83,10 +79,10 @@ function VirtualOffice() {
               />
             </div>
             <span className={styles.leftViewGroupInfo}>
-              {`Spark `}
+              {`Easy to use;`}
               <span
                 className={styles.leftViewGroupHighlight}
-              >{`geniune  connections`}</span>
+              >{` no downloads`}</span>
             </span>
           </div>
           <button

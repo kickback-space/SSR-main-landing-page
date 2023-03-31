@@ -19,7 +19,7 @@ export default function Home() {
         <title>Kickback space Inc</title>
         <meta
           name='description'
-          content="Come together in a more human way. kick back space is designed to let unstructured meetings feel like we're actually together"
+          content="Network in a more human way. kick back space is designed to let unstructured meetings feel like we're actually together"
         />
         <link rel='icon' href='/favicon.ico' />
         <link

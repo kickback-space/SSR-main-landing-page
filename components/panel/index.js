@@ -31,7 +31,7 @@ function Panel() {
             </video>
           </div>
           <div className={styles.infoGroup}>
-            <span>{`kick back and come together in a more human way`}</span>
+            <span>{`kick back and network in a more human way`}</span>
             <div className={styles.buttonContainer}>
               <button onClick={actionClick}>{`See it in action`}</button>
             </div>
