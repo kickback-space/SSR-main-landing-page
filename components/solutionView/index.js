@@ -10,7 +10,7 @@ function SolutionView() {
             <span>{`What we need is a more natural solution `}</span>
           </div>
           <div className={styles.headerRight}>
-            <span>{`that let’s everyone participate`}</span>
+            <span>{`that levels the playing field to boost inclusivity`}</span>
           </div>
         </div>
         <div className={styles.bodyView}>
@@ -24,8 +24,8 @@ function SolutionView() {
             </div>
             <div className={styles.wrapperTitleView}>
               <ul>
-                <li>{`enables parallel conversations`}</li>
-                <li>{`promotes natural group transitions`}</li>
+                <li>{`Parallel conversations in the same group`}</li>
+                <li>{`Seamlessly shift between conversations`}</li>
               </ul>
             </div>
             <div className={styles.wrapperDetailView}>

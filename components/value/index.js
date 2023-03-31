@@ -8,10 +8,10 @@ function Value() {
       <div className={styles.contentView}>
         <span
           className={styles.title}
-        >{`Hear people as you would in real life and control your conversations`}</span>
+        >{`Experience lifelike audio and have full control over your conversations.`}</span>
         <span
           className={styles.info}
-        >{`Those who are closer sound louder than those who are distant, letting you move in and out of conversations gracefully`}</span>
+        >{`Audio reflects spatial reality, allowing for smooth transitions in and out of conversations.`}</span>
         <div className={styles.groupEyeView}>
           <Image layout='fill' src={valueBanner} alt='eyeContactBanner' />
         </div>

@@ -16,11 +16,11 @@ function TraditionView() {
           </div>
         </div>
         <div className={styles.rightView}>
-          <span className={styles.title}>{`Traditionally:`}</span>
+          <span className={styles.title}>{`Usually:`}</span>
           <ul className={styles.wrapperDetail}>
             <li
               className={styles.detail}
-            >{`Only one person can speak at time`}</li>
+            >{`Conversations are dominated by a few`}</li>
             <li
               className={styles.detail}
             >{`No sense of non-verbal communication`}</li>
