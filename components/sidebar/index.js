@@ -57,14 +57,14 @@ function Sidebar(props) {
           </div>
         </div>
         <div className={styles.contentSidebar}>
-          <span className='cursor' onClick={getStart}>
+          {/* <span className='cursor' onClick={getStart}>
             {' '}
             {'How to get started'}{' '}
           </span>
           <span className='cursor' onClick={FAQ}>
             {' '}
             {'FAQ'}{' '}
-          </span>
+          </span> */}
           <button
             className={`cursor ${styles.actionButton}`}
             onClick={action}
