@@ -13,7 +13,7 @@ import TraditionView from '../components/traditionView';
 import SolutionView from '../components/solutionView';
 import { associationCopy } from '../utils/copyright_variables';
 
-export default function Home() {
+export default function AssociationPage() {
   return (
     <div>
       <Head>

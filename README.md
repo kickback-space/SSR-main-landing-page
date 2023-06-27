@@ -28,4 +28,5 @@ Server side rendered main landing page
 2. Duplicate `index.js` within the `pages` directory and rename to match the route you want (e.g. for `metaverse` ICP, you would create `pages/metaverse` file)
 3. In your new page, update:
     - import: `import { defaultCopy } from '../utils/copyright_variables';`
+    - function name: `Home()` to `{YourRouteHere}Page()`
     - component props: `copy={defaultCopy}`

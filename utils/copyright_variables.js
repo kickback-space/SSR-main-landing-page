@@ -1,22 +1,22 @@
 export const associationCopy = {
     panel: {
-        title: 'our 3D communication and interaction platform is the solution for Associations with distributed members and operations'
+        title: 'Built for Associations to boost member value by offering a better way to network'
     },
     tradition: {
         title: 'Are you looking to:',
         list: [
-            'Amplify member engagement',
-            'Boost retention',
-            'Attract new members'
+            'amplify member engagement?',
+            'boost retention?',
+            'increase sponsorship revenue?'
         ]
     },
     solution: {
-        headerLeft: 'We’re redefining what it means to meet up virtually',
-        headerRight: 'All it takes is your laptop',
+        headerLeft: 'Introducing Kickback, the best way to meet in a more human way',
+        headerRight: 'All you need is a simple laptop',
         list: [
-            'Immersive 3D environments',
-            'Dynamic spatial audio',
-            'High-quality video'
+            'Sponsorship branded environments',
+            'In-person networking vibes, online',
+            'A premium experience'
         ],
     },
     faq: {
@@ -30,7 +30,7 @@ export const associationCopy = {
 
 export const defaultCopy = {
     panel: {
-        title: 'kick back and network in a more human way'
+        title: 'kick back and meet in a more human way'
     },
     tradition: {
         title: 'Usually:',
@@ -41,7 +41,7 @@ export const defaultCopy = {
     },
     solution: {
         headerLeft: 'What we need is a more natural solution',
-        headerRight: 'that levels the playing field to boost inclusivity',
+        headerRight: 'that turns everyone into an active participant',
         list: [
             'Parallel conversations in the same group',
             'Seamlessly shift between conversations',
