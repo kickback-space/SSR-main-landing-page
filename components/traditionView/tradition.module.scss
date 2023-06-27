@@ -8,12 +8,12 @@
     padding: 0px 24px;
     @include desktop {
       padding: 0px 100px;
-      flex-direction: row;
+      flex-direction: row-reverse;
       max-width: 1342px;
       margin: auto;
       margin-top: 108px;
     }
-    .leftView {
+    .rightView {
       height: 272px;
       @include desktop {
         height: unset;
@@ -26,7 +26,7 @@
         height: 100%;
       }
     }
-    .rightView {
+    .leftView {
       margin-top: 64px;
       display: flex;
       flex-direction: column;
@@ -36,9 +36,8 @@
         margin-top: unset;
         margin-left: 105px;
       }
-  
       .title {
-        font-weight: 600;
+        font-weight: bold;
         font-size: 20px;
         line-height: 190%;
         color: #254261;
@@ -52,6 +51,7 @@
       }
       .wrapperDetail {
         padding-top: 8px;
+        padding-bottom: 16px;
         display: flex;
         flex-direction: column;
         list-style-position: inside;

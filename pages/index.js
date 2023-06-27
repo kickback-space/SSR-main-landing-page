@@ -36,7 +36,7 @@ export default function Home() {
         {/* <VirtualOffice /> */}
         {/* <Easy /> */}
         {/* <Value /> */}
-        {/* <FAQ /> */}
+        <FAQ />
         {/* <Team /> */}
         <Footer />
         <GetEarlyAccessView />

@@ -10,7 +10,6 @@
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     background: rgba(70, 191, 199, 0.93);
-    width: 324px;
     .headerSidebar {
       height: 79px;
       .image {
@@ -20,7 +19,8 @@
       }
     }
     .contentSidebar {
-      margin-left: 26px;
+      margin-left: 16px;
+      margin-right: 16px;
       display: flex;
       flex-direction: column;
       grid-gap: 31px;

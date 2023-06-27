@@ -60,11 +60,11 @@ function Sidebar(props) {
           {/* <span className='cursor' onClick={getStart}>
             {' '}
             {'How to get started'}{' '}
-          </span>
+          </span> */}
           <span className='cursor' onClick={FAQ}>
             {' '}
             {'FAQ'}{' '}
-          </span> */}
+          </span>
           <button
             className={`cursor ${styles.actionButton}`}
             onClick={action}

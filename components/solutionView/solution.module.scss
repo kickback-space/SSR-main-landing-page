@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     margin: auto;
-    margin-top: 48px;
+    margin-top: 64px;
     padding: 0px 16px;
     @include desktop {
       padding: 0px 100px;
@@ -17,6 +17,7 @@
       width: 100%;
       display: flex;
       flex-direction: column;
+      margin-top: 64px;
       @include desktop {
         flex-direction: row;
       }
@@ -33,9 +34,9 @@
           border-bottom: 1px dashed #46bfc7;
         }
         span {
-          font-weight: 700;
-          font-size: 24px;
-          line-height: 184%;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 175%;
           color: #254261;
           @include desktop {
             font-weight: 700;
@@ -48,6 +49,7 @@
       .headerRight {
         padding-top: 16px;
         text-align: center;
+        align-items: center;
         @include desktop {
           flex: 1;
           padding: 19px 35px 23px 35px;
@@ -56,9 +58,9 @@
           border-top: 1px dashed #46bfc7;
         }
         span {
-          font-weight: 700;
-          font-size: 24px;
-          line-height: 184%;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 175%;
           color: #15a9b2;
           @include desktop {
             font-weight: 700;
@@ -91,7 +93,7 @@
           height: 68px;
         }
         .wrapperTitleView {
-          margin-top: 32px;
+          margin-top: 16px;
           padding: 0px 8px;
           @include desktop {
             margin-top: 35px;
@@ -156,12 +158,12 @@
         }
       }
       .bodyRight {
-        padding: 26px 0px;
+        padding: 0px 0px;
         display: flex;
         justify-content: center;
         @include desktop {
           flex: 1;
-          padding: 20px 0px;
+          padding: 0px 0px;
         }
         .wrapperVideo {
           max-width: 608px;

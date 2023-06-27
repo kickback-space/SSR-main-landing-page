@@ -2,6 +2,7 @@ import Image from 'next/image';
 import styles from './panel.module.scss';
 import * as React from 'react';
 import { usePlausible } from 'next-plausible';
+import { panelCopy } from '../utils/copyright_variables';
 import axios from 'axios';
 
 function Panel() {
@@ -25,16 +26,18 @@ function Panel() {
     <div id='panelView' className={styles.wrapperView}>
       <div className={styles.contentView}>
         <div className={styles.titleGroup}>
+          <div className={styles.infoGroup}>
+            <span>
+              {panelCopy.title}
+            </span>
+            <div className={styles.buttonContainer}>
+              <button onClick={actionClick}>{`See it in action`}</button>
+            </div>
+          </div>
           <div className={styles.videoGroup}>
             <video autoPlay muted loop playsInline>
               <source src='/video/mainVideo.mp4' type='video/mp4' />
             </video>
-          </div>
-          <div className={styles.infoGroup}>
-            <span>{`kick back and network in a more human way`}</span>
-            <div className={styles.buttonContainer}>
-              <button onClick={actionClick}>{`See it in action`}</button>
-            </div>
           </div>
         </div>
       </div>
