@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styles from './panel.module.scss';
 import * as React from 'react';
 import { usePlausible } from 'next-plausible';
-import { panelCopy } from '../utils/copyright_variables';
+import { panelCopy } from '../../utils/copyright_variables';
 import axios from 'axios';
 
 function Panel() {

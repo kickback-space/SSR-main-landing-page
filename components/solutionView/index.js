@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './solution.module.scss';
-import { solutionCopy } from '../utils/copyright_variables';
+import { solutionCopy } from '../../utils/copyright_variables';
 
 function SolutionView() {
   return (

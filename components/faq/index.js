@@ -1,7 +1,7 @@
 import { useState, memo } from 'react';
 import styles from './faq.module.scss';
 import Accordion from '../according';
-import { faqCopy } from '../utils/copyright_variables';
+import { faqCopy } from '../../utils/copyright_variables';
 
 function FAQ() {
   const [indexActive, setIndexActive] = useState(null);

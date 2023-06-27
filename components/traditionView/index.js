@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './tradition.module.scss';
-import { traditionCopy } from '../utils/copyright_variables';
+import { traditionCopy } from '../../utils/copyright_variables';
 
 function TraditionView() {
   return (
