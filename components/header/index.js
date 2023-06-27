@@ -95,10 +95,10 @@ function Header() {
           />
         </div>
         <div className={styles.headerGroupView}>
-          <span
+          {/* <span
             className={`cursor ${styles.titleItem}`}
             onClick={getStart}
-          >{`How to get started`}</span>
+          >{`How to get started`}</span> */}
           <span
             className={`v-ml-75 cursor ${styles.titleItem}`}
             onClick={FAQ}

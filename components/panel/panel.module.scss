@@ -15,14 +15,14 @@
       align-items: center;
       padding: 0px 16px;
       @include desktop {
-        flex-direction: row-reverse;
+        flex-direction: row;
         justify-content: space-between;
         padding: 196px 100px 0vh 100px;
         max-width: 1342px;
         margin: auto;
       }
       span {
-        margin-top: 24px;
+        margin-top: 0px;
         text-align: center;
         font-weight: bold;
         font-size: 20px;
@@ -66,7 +66,7 @@
       display: flex;
       flex-direction: column;
       flex: 1;
-      margin-top: 41px;
+      margin-top: 0px;
       @include desktop {
         margin-top: unset;
         margin-right: 25px;
@@ -89,8 +89,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 24px;
+        margin: 12px 0px;
         @include desktop {
+          display: none;
           margin-top: 32px;
           justify-content: unset;
         }

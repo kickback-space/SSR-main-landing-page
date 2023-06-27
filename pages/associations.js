@@ -11,9 +11,9 @@ import Team from '../components/team';
 import GetEarlyAccessView from '../components/earlyAccessView';
 import TraditionView from '../components/traditionView';
 import SolutionView from '../components/solutionView';
-import { defaultCopy } from '../utils/copyright_variables';
+import { associationCopy } from '../utils/copyright_variables';
 
-export default function Home() {
+export default function AssociationPage() {
   return (
     <div>
       <Head>
@@ -30,14 +30,14 @@ export default function Home() {
       </Head>
       <main>
         <Header />
-        <Panel copy={defaultCopy}/>
+        <Panel copy={associationCopy}/>
         {/* <Information /> */}
-        <TraditionView copy={defaultCopy}/>
-        <SolutionView copy={defaultCopy}/>
+        <TraditionView copy={associationCopy}/>
+        <SolutionView copy={associationCopy}/>
         {/* <VirtualOffice /> */}
         {/* <Easy /> */}
         {/* <Value /> */}
-        <FAQ copy={defaultCopy}/>
+        <FAQ copy={associationCopy}/>
         {/* <Team /> */}
         <Footer />
         <GetEarlyAccessView />

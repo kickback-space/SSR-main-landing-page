@@ -22,10 +22,10 @@ function Footer() {
           <div className={styles.contactGroup}>
             <div className={styles.firstContact}>
               <div className={styles.leftFooter}>
-                <span
+                {/* <span
                   className='cursor'
                   onClick={getStart}
-                >{`How to get started`}</span>
+                >{`How to get started`}</span> */}
                 <span className='cursor' onClick={faqAction}>{`FAQ`}</span>
               </div>
               <div className={styles.rightFooter}>
