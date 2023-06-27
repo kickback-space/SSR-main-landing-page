@@ -19,7 +19,7 @@ export default function Home() {
         <title>Kickback space Inc</title>
         <meta
           name='description'
-          content="Network in a more human way. kick back space is designed to let unstructured meetings feel like we're actually together"
+          content="Meet in a more human way. kick back space is designed to let open dialogue flourish"
         />
         <link rel='icon' href='/favicon.ico' />
         <link
@@ -30,14 +30,14 @@ export default function Home() {
       <main>
         <Header />
         <Panel />
-        <Information />
+        {/* <Information /> */}
         <TraditionView />
         <SolutionView />
-        <VirtualOffice />
-        <Easy />
-        <Value />
-        <FAQ />
-        <Team />
+        {/* <VirtualOffice /> */}
+        {/* <Easy /> */}
+        {/* <Value /> */}
+        {/* <FAQ /> */}
+        {/* <Team /> */}
         <Footer />
         <GetEarlyAccessView />
       </main>
