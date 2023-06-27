@@ -1,16 +1,16 @@
 import Image from 'next/image';
 import styles from './tradition.module.scss';
-import { traditionCopy } from '../../utils/copyright_variables';
 
-function TraditionView() {
+function TraditionView(props) {
+  const { copy } = props;
   return (
     <div id='traditionView' className={styles.wrapperView}>
       <div className={styles.contentView}>
         <div className={styles.leftView}>
-          <span className={styles.title}>{traditionCopy.title}</span>
+          <span className={styles.title}>{copy.tradition.title}</span>
           <ul className={styles.wrapperDetail}>
 
-          {traditionCopy.list.map((item, index) => {
+          {copy.tradition.list.map((item, index) => {
               return (
                 <li key={index} className={styles.detail}>
                   <span>{item}</span>

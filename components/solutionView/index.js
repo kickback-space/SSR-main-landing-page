@@ -1,17 +1,17 @@
 import Image from 'next/image';
 import styles from './solution.module.scss';
-import { solutionCopy } from '../../utils/copyright_variables';
 
-function SolutionView() {
+function SolutionView(props) {
+  const { copy } = props;
   return (
     <div id='solutionView' className={styles.wrapperView}>
       <div className={styles.contentView}>
         <div className={styles.headerView}>
           <div className={styles.headerLeft}>
-            <span>{solutionCopy.headerLeft}</span>
+            <span>{copy.solution.headerLeft}</span>
           </div>
           <div className={styles.headerRight}>
-            <span>{solutionCopy.headerRight}</span>
+            <span>{copy.solution.headerRight}</span>
           </div>
         </div>
         <div className={styles.bodyView}>
@@ -25,7 +25,7 @@ function SolutionView() {
             </div> */}
             <div className={styles.wrapperTitleView}>
               <ul>
-                {solutionCopy.list.map((item, index) => {
+                {copy.solution.list.map((item, index) => {
                   return (
                     <li key={index} className={styles.title}>
                       <span>{item}</span>

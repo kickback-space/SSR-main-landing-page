@@ -1,9 +1,9 @@
 import { useState, memo } from 'react';
 import styles from './faq.module.scss';
 import Accordion from '../according';
-import { faqCopy } from '../../utils/copyright_variables';
 
-function FAQ() {
+function FAQ(props) {
+  const { copy } = props;
   const [indexActive, setIndexActive] = useState(null);
   function updateStateAccordion(indexAccordion) {
     let result = indexActive === indexAccordion ? null : indexAccordion;
@@ -54,7 +54,7 @@ function FAQ() {
           <div className={styles.questionItem}>
             <Accordion
               type='question'
-              title={ faqCopy.whyKickback.title }
+              title={ copy.faq.whyKickback.title }
               toggleAccordion={updateStateAccordion}
               active={indexActive === 2}
               indexAccordion={2}
@@ -62,10 +62,10 @@ function FAQ() {
               <div className={styles.content}>
                 <div className={styles.divine} />
                 <span>
-                  { faqCopy.whyKickback.content1 }
+                  { copy.faq.whyKickback.content1 }
                   <br />
                   <br />
-                  { faqCopy.whyKickback.content2 }
+                  { copy.faq.whyKickback.content2 }
                 </span>
               </div>
             </Accordion>

@@ -2,10 +2,10 @@ import Image from 'next/image';
 import styles from './panel.module.scss';
 import * as React from 'react';
 import { usePlausible } from 'next-plausible';
-import { panelCopy } from '../../utils/copyright_variables';
 import axios from 'axios';
 
-function Panel() {
+function Panel(props) {
+  const { copy } = props;
   const plausible = usePlausible();
   function actionClick() {
     plausible('SeeItInAction');
@@ -28,7 +28,7 @@ function Panel() {
         <div className={styles.titleGroup}>
           <div className={styles.infoGroup}>
             <span>
-              {panelCopy.title}
+              {copy.panel.title}
             </span>
             <div className={styles.buttonContainer}>
               <button onClick={actionClick}>{`See it in action`}</button>
