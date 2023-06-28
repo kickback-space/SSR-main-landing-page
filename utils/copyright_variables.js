@@ -1,57 +1,92 @@
 export const associationCopy = {
     panel: {
-        title: 'Built for Associations to boost member value by offering a better way to network'
+        title: 'Boost Association Value and Engagement with Immersive 3D Networking'
     },
     tradition: {
-        title: 'Are you looking to:',
+        title: 'Are you aiming to:',
         list: [
             'amplify member engagement?',
-            'boost retention?',
-            'increase sponsorship revenue?'
+            'strengthen member relationships?',
+            'increase sponsorship revenue?',
+            'create unforgettable experiences?'
         ]
     },
     solution: {
-        headerLeft: 'Introducing Kickback, the best way to meet in a more human way',
+        headerLeft: 'Introducing Kickback, revolutionizing association interaction',
         headerRight: 'All you need is a simple laptop',
         list: [
-            'Sponsorship branded environments',
-            'In-person networking vibes, online',
-            'A premium experience'
+            'Sponsorship-branded 3D environments',
+            'Authentic, in-person networking vibes, online',
+            'Immersive, high-quality member experience'
         ],
     },
     faq: {
         whyKickback: {
-            title: 'Why use Kickback over traditional communication solutions?',
-            content1: `While other communication solutions are limited by virtual, we use it to our advantage. We are making Kickback the most human-centric communication platform available. Spatial audio makes it feel like you're all in the same room. Patterns of intent are captured and used to modify your experience in real-time.`,
-            content2: `We have designed Kickback to break the virtual barriers between people, infusing each digital meetup with the authenticity, engagement, and human connection of meeting in person.`
+            title: 'Why choose Kickback over traditional communication solutions?',
+            content1: `While other communication solutions remain limited by their virtual format, we turn it into an asset. Kickback is designed to be the most human-centric communication platform available. Our use of spatial audio and 3D environments offers a sense of proximity and presence that makes it feel like you're all in the same room.`,
+            content2: `We've built Kickback to dissolve the virtual barriers between people, infusing each digital meetup with the authenticity, engagement, and human connection of face-to-face meetings. Upgrade from flat 2D video conferencing to the immersive 3D world of Kickback, and elevate your association's member experience like never before.`
         },
     }
 }
+
+
+export const communityCopy = {
+    panel: {
+        title: 'Empower Your Community with Engaging, Immersive Experiences'
+    },
+    tradition: {
+        title: 'Do you want to:',
+        list: [
+            'enhance community engagement?',
+            'foster deeper relationships?',
+            'create memorable experiences?'
+        ]
+    },
+    solution: {
+        headerLeft: 'Discover Kickback, the next generation of community interaction',
+        headerRight: 'All you need is a simple laptop',
+        list: [
+            'Create dynamic, interactive environments',
+            'Facilitate open dialogues, emulate real-life interaction',
+            'Deliver a premium, human-centric experience'
+        ],
+    },
+    faq: {
+        whyKickback: {
+            title: 'Why choose Kickback over traditional communication solutions?',
+            content1: `While other communication solutions are constrained by their virtual nature, we transform it into a strength. Kickback is designed to be the most human-centric communication platform available. Our use of spatial audio and 3D environments brings the authenticity and intimacy of in-person interaction to the virtual world.`,
+            content2: `Kickback is built to break down the virtual barriers between community members, infusing each digital meetup with authenticity, engagement, and real human connection. Say goodbye to the limitations of 2D video conferencing, and hello to the future of community interaction.`
+        },
+    }
+}
+
 
 export const defaultCopy = {
     panel: {
         title: 'kick back and meet in a more human way'
     },
     tradition: {
-        title: 'Usually:',
+        title: 'Typically:',
         list: [
             'Conversations are dominated by a few',
-            'No sense of non-verbal communication',
+            'Non-verbal communication is lost',
+            'Virtual interaction feels impersonal and distant',
         ]
     },
     solution: {
-        headerLeft: 'What we need is a more natural solution',
-        headerRight: 'that turns everyone into an active participant',
+        headerLeft: 'We offer a more intuitive, immersive solution',
+        headerRight: 'that empowers everyone to actively participate',
         list: [
-            'Parallel conversations in the same group',
-            'Seamlessly shift between conversations',
+            'Engage in parallel conversations within the same group',
+            'Seamlessly shift between discussions, mimicking real-life interaction',
+            'Experience 3D environments that make you feel present',
         ],
     },
     faq: {
         whyKickback: {
-            title: 'Why use Kickback over traditional communication solutions?',
-            content1: `While other communication solutions are limited by virtual, we use it to our advantage. We are making Kickback the most human-centric communication platform available. Spatial audio makes it feel like you're all in the same room. Patterns of intent are captured and used to modify your experience in real-time.`,
-            content2: `We have designed Kickback to break the virtual barriers between people, infusing each digital meetup with the authenticity, engagement, and human connection of meeting in person.`
+            title: 'Why choose Kickback over traditional communication solutions?',
+            content1: `While other platforms struggle with the limitations of virtual communication, Kickback transforms these constraints into strengths. We've built the most human-centric communication platform available, leveraging spatial audio and 3D video to bring everyone into the same virtual room.`,
+            content2: `Kickback is designed to dismantle the barriers of virtual interaction, infusing every digital meetup with authenticity, engagement, and a sense of genuine human connection. Rediscover the depth and nuance of in-person meetings, right from your laptop.`,
         },
     }
 }
