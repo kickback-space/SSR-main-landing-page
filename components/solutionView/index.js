@@ -16,13 +16,14 @@ function SolutionView(props) {
         </div>
         <div className={styles.bodyView}>
           <div className={styles.bodyLeft}>
-            {/* <div className={styles.wrapperImageView}>
+            <div className={styles.wrapperImageView}>
               <Image
                 layout='fill'
                 objectFit='contain'
                 src={'/icon/solutionKickbackIcon.png'}
+                alt={`logo`}
               />
-            </div> */}
+            </div>
             <div className={styles.wrapperTitleView}>
               <ul>
                 {copy.solution.list.map((item, index) => {
