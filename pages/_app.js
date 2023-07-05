@@ -1,5 +1,6 @@
 import '../styles/index.scss';
 import PlausibleProvider from 'next-plausible';
+import InsightTag from '../components/linkedin/insightTag';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -8,6 +9,7 @@ function MyApp({ Component, pageProps }) {
       trackOutboundLinks
       trackLocalhost
     >
+      <InsightTag />
       <Component {...pageProps} />
     </PlausibleProvider>
   );
