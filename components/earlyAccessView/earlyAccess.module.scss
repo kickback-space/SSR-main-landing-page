@@ -2,11 +2,10 @@
 
 .wrapperView {
   position: fixed;
-  right: 50px;
   bottom: 20px;
   z-index: 999;
   display: flex;
-  justify-content: right;
+  justify-content: left;
   left: 50px;
   width: calc(100vw - 200px);
   @include desktop {
@@ -21,7 +20,7 @@
   }
 
   @include smallMobile {
-    left: 16px;
+    left: 24px;
     bottom: 18px;
   }
   .button {
