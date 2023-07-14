@@ -43,7 +43,7 @@ function EarlyAccessView() {
   }
   return (
     <div id='earlyAccessView' className={styles.wrapperView}>
-      <div id='nextView' className={`${styles.bottomPanel} cursor`}>
+      {/* <div id='nextView' className={`${styles.bottomPanel} cursor`}>
         <Image
           onClick={handleTransitionNextView}
           layout='fill'
@@ -51,7 +51,7 @@ function EarlyAccessView() {
           src={'/icon/arrowBannerIcon.svg'}
           alt='arrowBannerIcon'
         />
-      </div>
+      </div> */}
       <div className={styles.button} onClick={openForm} />
     </div>
   );
