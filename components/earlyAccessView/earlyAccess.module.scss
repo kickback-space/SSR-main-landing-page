@@ -3,12 +3,12 @@
 .wrapperView {
   position: fixed;
   right: 50px;
-  bottom: 90px;
+  bottom: 20px;
   z-index: 999;
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   left: 50px;
-  width: calc(100vw - 100px);
+  width: calc(100vw - 200px);
   @include desktop {
     max-width: 1440px;
     margin: auto;
@@ -21,8 +21,8 @@
   }
 
   @include smallMobile {
-    right: 16px;
-    bottom: 16px;
+    left: 16px;
+    bottom: 18px;
   }
   .button {
     width: 166px;
