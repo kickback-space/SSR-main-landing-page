@@ -40,7 +40,7 @@ export default function communityPage() {
         <FAQ copy={communityCopy}/>
         {/* <Team /> */}
         <Footer />
-        <GetEarlyAccessView />
+        {/* <GetEarlyAccessView /> */}
       </main>
     </div>
   );
