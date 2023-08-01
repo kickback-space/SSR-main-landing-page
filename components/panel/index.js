@@ -22,6 +22,13 @@ function Panel(props) {
       window.open('https://calendly.com/rocco-haro/15min', '_blank');
     })
   }
+
+  function openForm() {
+    window.open(
+      'https://xtm50lcgfwe.typeform.com/to/cTz6CDkh?typeform-source=landing_page_desktop'
+    );
+    plausible('SignUp');
+  }
   return (
     <div id='panelView' className={styles.wrapperView}>
       <div className={styles.contentView}>
@@ -30,9 +37,13 @@ function Panel(props) {
             <span>
               {copy.panel.title}
             </span>
-            <div className={styles.buttonContainer}>
+            {/* <div className={styles.buttonContainer}>
               <button onClick={actionClick}>{`See it in action`}</button>
-            </div>
+            </div> */}
+            <button
+              className={`cursor  ${styles.formButton}`}
+              onClick={openForm}
+            ></button>
           </div>
           <div className={styles.videoGroup}>
             <video autoPlay muted loop playsInline>

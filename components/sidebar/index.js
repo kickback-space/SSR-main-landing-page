@@ -42,6 +42,13 @@ function Sidebar(props) {
     })
   }
 
+  function openForm() {
+    window.open(
+      'https://xtm50lcgfwe.typeform.com/to/cTz6CDkh?typeform-source=landing_page_desktop'
+    );
+    plausible('SignUp');
+  }
+
   return (
     <div className={`${styles.wrapperSidebar} ${sidebarClass}`}>
       <div className={`cursor ${styles.outsize}`} onClick={toggleSidebar} />
@@ -65,10 +72,14 @@ function Sidebar(props) {
             {' '}
             {'FAQ'}{' '}
           </span>
-          <button
+          {/* <button
             className={`cursor ${styles.actionButton}`}
             onClick={action}
-          >{`See it in action`}</button>
+          >{`See it in action`}</button> */}
+          <button
+            className={`cursor ${styles.formButton}`}
+            onClick={openForm}
+          ></button>
         </div>
       </div>
     </div>

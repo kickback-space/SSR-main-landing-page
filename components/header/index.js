@@ -64,6 +64,13 @@ function Header() {
     handleBlockScroll();
   });
 
+  function openForm() {
+    window.open(
+      'https://xtm50lcgfwe.typeform.com/to/cTz6CDkh?typeform-source=landing_page_desktop'
+    );
+    plausible('SignUp');
+  }
+
   return (
     <div id='headerView' className={styles.headerView}>
       <div className={styles.headerWrapperView}>
@@ -103,10 +110,14 @@ function Header() {
             className={`v-ml-75 cursor ${styles.titleItem}`}
             onClick={FAQ}
           >{`FAQ`}</span>
-          <button
+          {/* <button
             className={`cursor v-ml-83 ${styles.actionButton}`}
             onClick={action}
-          >{`See it in action`}</button>
+          >{`See it in action`}</button> */}
+          <button
+            className={`cursor v-ml-83 ${styles.formButton}`}
+            onClick={openForm}
+          ></button>
         </div>
       </div>
       <Sidebar isOpen={sidebarOpen} toggleSidebar={handleViewSidebar} />

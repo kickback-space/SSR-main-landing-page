@@ -96,6 +96,31 @@
           justify-content: unset;
         }
       }
+      .formButton {
+        width: 166px;
+        height: 58px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 12px;
+        border-radius: 12px;
+        background-image: url('/button/earlyAccess/default.png');
+        background-size: 100% 100%;
+        border: unset;
+        &:hover {
+          background-image: url('/button/earlyAccess/hover.png');
+        }
+        &:active {
+          background-image: url('/button/earlyAccess/disable.png');
+        }
+        @include desktop {
+          display: none;
+          margin-top: 32px;
+          justify-content: unset;
+        }
+      }
     }
   }
   .layoutImage {

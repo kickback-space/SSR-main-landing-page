@@ -40,7 +40,7 @@ export default function Home() {
         <FAQ copy={defaultCopy}/>
         {/* <Team /> */}
         <Footer />
-        <GetEarlyAccessView />
+        {/* <GetEarlyAccessView /> */}
       </main>
     </div>
   );
